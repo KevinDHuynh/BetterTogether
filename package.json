@@ -2,18 +2,22 @@
   "name": "bettertogether",
   "version": "0.0.1",
   "description": "Site that advertizes lifestyle as a focus",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KevinDHuynh/BetterTogether.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Christian Arce, Kevin Huynh, Jose Fossi",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/KevinDHuynh/BetterTogether/issues"
   },
-  "homepage": "https://github.com/KevinDHuynh/BetterTogether#readme"
+  "homepage": "https://github.com/KevinDHuynh/BetterTogether#readme",
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
 }
