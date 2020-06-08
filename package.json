@@ -1,0 +1,19 @@
+{
+  "name": "bettertogether",
+  "version": "0.0.1",
+  "description": "Site that advertizes lifestyle as a focus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinDHuynh/BetterTogether.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevinDHuynh/BetterTogether/issues"
+  },
+  "homepage": "https://github.com/KevinDHuynh/BetterTogether#readme"
+}
