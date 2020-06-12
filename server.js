@@ -4,6 +4,10 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+//API routes
+const habit_recorders = require('./routes/api/habit_recorders');
+app.use('/api/habit_recorders', habit_recorders);
+
 //Bodyparser
 app.use(bodyParser.json());
 
@@ -18,4 +22,3 @@ mongoose.connect(db)
     const port = process.env.port || 5000;
 
     app.listen(port, () => console.log('Server started on port ${port}'));
-    

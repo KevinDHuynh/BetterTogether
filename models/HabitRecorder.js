@@ -4,33 +4,40 @@ const Schema = mongoose.Schema;
 // HabitRecorder schema
 const HabitSchema = new Schema({
     title: {
-        type: String,
-        required: true
+        type: String, //enum
+        default: ""
     },
     type: {
-        type: Enumerator,
-        required: true
+        type: String, //enum
+        default: ""
     },
     description: {
-        type: String
+        type: String,
+        default: ""
     },
     predicted_longterm_benefit: {
-        type: String
+        type: String,
+        default: ""
     },
     estimated_difficulty: {
-        type: Enumerator
+        type: String, //enum
+        default: ""
     },
     estimated_time: {
-        type: TimeRanges
+        type: Number, // time range
+        default: 0
     },
     actual_difficulty: {
-        type: Enumerator
+        type: String, //enum
+        default: ""
     },
     actual_time: {
-        type: TimeRanges
+        type: Number, // time range
+        default: 0
     },
     perceived_benefit: {
-        type: Enumerator
+        type: String, //enum
+        default: ""
     }
 });
 
