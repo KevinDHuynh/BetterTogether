@@ -1,15 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 
 const app = express();
+
+//Bodyparser
+app.use(express.json());
 
 //API routes
 const habit_recorders = require('./routes/api/habit_recorders');
 app.use('/api/habit_recorders', habit_recorders);
-
-//Bodyparser
-app.use(bodyParser.json());
 
 //DB
 const db = require('./config/keys').mongoURI;

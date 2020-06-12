@@ -22,7 +22,15 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     // Create a new DB entry
     const newHabitRecorder = new HabitRecorder({
-        title: req.params.title
+        title: req.body.title,
+        type: req.body.type,
+        description: req.body.description,
+        predicted_longterm_benefit: req.body.predicted_longterm_benefit,
+        estimated_difficulty: req.body.estimated_difficulty,
+        estimated_time: req.body.estimated_time,
+        actual_difficulty: req.body.actual_difficulty,
+        actual_time: req.body.actual_time,
+        perceived_benefit: req.body.perceived_benefit
     });
 
     newHabitRecorder.save().then(hr => res.send(hr));
