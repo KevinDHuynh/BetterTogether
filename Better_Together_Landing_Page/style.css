@@ -1,7 +1,9 @@
 /* styling for body and major divs */
 body {
+    padding-top: 130px; /* pushes Hero image down so fixed nav bar doesnt ccover it*/
     margin: 0 auto;
-    font-family: sans-serif;
+    /* top:0; */
+    font-family: fantasy, sans-serif;
 }
 
 .zone {
@@ -10,8 +12,6 @@ body {
     border:1px solid #bbb;
     transition: all 0.3s linear;
 }
-
-
 
 /* nav bar */
 .main-nav {
@@ -52,11 +52,6 @@ a {
   top: 0;
   width: 100%;
 }
-
-/* .main-nav > li > img{
-    height: auto;
-    width:  100%;
-} */
 
 /*  Login/Signup Modal */
 .modal-log-bg{
@@ -126,18 +121,45 @@ a {
 }
 
 /* hero/cover image */
-.container {
-    /*show heigh: auto*/
-    height: 100vh; 
+.cover {
+    height: 90vh; 
     display: flex;
-    flex:wrap;
-    align-items: center;
-    justify-content: center;
+    justify-content:center;
+    align-items:flex-start;
+    color: #00473e;
 }
 
-.cover {
-    width: 100%;
-    height: auto;
+.container-cover{
+    height: 95vh;
+    width: 90vw;
+    margin-left: 30vw;
+    margin-right: 20vw;
+    display: flex;
+    flex:wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}  
+
+.cover-image{
+    background-image: url(./img/hero_image.jpg); 
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    
+}
+
+#catchline{
+    margin-top: 25vh;
+    margin-bottom: 0;
+    font-size: 16px;
+   
+}
+#headline{
+    margin-top:0;
+    margin-bottom: 1vh;
+    font-size:4.8em;
+    justify-self: self-start;
 }
 
 /* attempts at responsiveness */
@@ -177,6 +199,36 @@ a {
     }
 }
 
+/* possible structure  for  Also min-with 414* maybe 1280 also*/
+/* @media only screen and (max-width: 1024px) {
+    .main-nav {
+        font-size: 0.6em;
+        padding: 0;
+    }
+    
+    .main-nav > li > a> img{
+            height: auto;
+            width:  75%;
+    }
+
+}
+@media only screen and (max-width: 768px) {
+    .main-nav {
+        font-size: 0.5em;
+        padding: 0;
+    }
+    
+    .main-nav > li > a> img{
+            height: auto;
+            width:  65%;
+    }
+
+} */
+
+.end{
+    align-self: flex-end;
+}
+
 /* styling */
 .offwhite {
     background: #f2f7f5; /* Old browsers */
@@ -205,3 +257,11 @@ a {
     padding: .5em 1.5em;
 }
 
+#cta-big-btn{
+    font-size: 2em;
+    border-radius: 25px;
+    padding: 1em 3em;
+    margin-right: 25vh;
+    margin-left: 25vh;
+    margin-bottom: 70vh;
+}
