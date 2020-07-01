@@ -4,8 +4,8 @@
   <title>Better Together</title>
   <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
-<body class="offwhite" >
-  <nav class="zone offwhite sticky">
+<body class=" container-column offwhite" >
+  <nav class="offwhite sticky">
       <ul class="main-nav">
           <li> <a href="#hero"> <img src="./img/logo_nav.png" alt=""></li>
           <li><a href="#hero">Better Together</a></li>
@@ -25,7 +25,7 @@
       <!-- <img class="cover fullscreen" src="./img/hero_image.jpg"> -->
     </section>
   </div>
-  <div class=" zone benefits container-column-space margin-std min" >
+  <div class=" zone container-column-space  margin-std" >
       <section>
         <H3>ipsum lorem</H3>
         <p class="p-med">ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus accusamus reiciendis eius explicabo consequatur, aliquam perferendis maxime magnam, nemo vel! Corporis reiciendis, quo eos ea minus repellat praesentium alias?</p>
@@ -51,6 +51,37 @@
         </ul>
       </section>
   </div>
+
+  <div class="zone container-row-space cntr-vert margin-std">
+    <section class="container-column">
+      <h6>ipsum</h6>
+      <img class="img-align" src="./img/undraw_graph_50.png" alt="">
+    </section>
+    <section class="container-column">
+      <h3>ipsum</h3>
+      <p class="p-small-plus">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla odit repudiandae expedita ducimus neque corrupti error, quod deleniti nesciunt cupiditate vero eligendi vitae aliquid ex qui deserunt esse. Voluptates, dolorem?</p>
+    </section>
+  </div>
+
+  <div class="zone container-row-space margin-std ">
+  <!-- <div class="zone container-row-space">   -->
+        <div class= "carousel-container">
+          <img src="./img/left-chevron.svg" id="prevBtn"></img>
+          <img src="./img/right-chevron.svg" id ="nextBtn"></img>
+          <div class="carousel-slide container ">
+             <img src="./img/5m.jpg" id="lastClone" alt="">
+             <img src="./img/1mc.jpg" alt="">
+             <img src="./img/2m.jpg" alt="">
+             <img src="./img/3m.jpg" alt="">
+             <img src="./img/4m.jpg" alt="">
+             <img src="./img/5m.jpg" alt="">
+             <img src="./img/1mc.jpg" id="firstClone" alt="">
+          </div>
+        </div>
+
+  </div>
+  <!-- <button id="prevBtn">prev</button>
+  <button id="nextBtn">next</button> -->
   <div class="modal-sign-bg">
     <div class="modal">
       <h2>Sign Up For Better Together!</h2>
@@ -76,5 +107,6 @@
     </div>
   </div>
   <script src="modal.js"></script>
+  <script src="carousel.js"></script>
 </body>
 </html>

@@ -128,7 +128,9 @@ a {
 
 /* hero/cover image */
 .cover {
-    height: 90vh; 
+    height: 90vh;
+    /* margin: 1vh;  */
+    padding-bottom: 1vh;
     display: flex;
     justify-content:center;
     align-items:flex-start;
@@ -172,9 +174,53 @@ a {
 /*The Benefits*/
 
 
-.benefits {
+.zone {
     height: 90vh; 
     color: #00473e;
+}
+
+
+
+/* experience*/
+.carousel-container{
+    width: 63%;
+    margin: auto;
+    overflow:hidden;
+    border: 5px solid black;
+    position: relative;
+}
+
+.carousel-slide{
+    /* display: flex; */
+    width: 100%;
+    height: 638px;
+}
+
+#prevBtn{
+    width:1em;
+    height: 1em;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 5%;
+    font-size:30px;
+    /* color: white; */
+    opacity: 0.5;
+    cursor: pointer;
+
+}
+#nextBtn{
+    width:1em;
+    height: 1em;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    font-size:30px;
+    /* color: white; */
+    opacity: 0.5;
+    cursor: pointer;
+
 }
 
 /* attempts at responsiveness */
@@ -241,26 +287,36 @@ a {
 } */
 
 /* streamlined generic containers implemented in the benefits section */
+.container{
+    display:flex;
+}
+
 .container-column{
     display:flex;
     flex-direction: column;
+    
 }
 .container-column-space{
     display:flex;
     flex-direction: column;
     justify-content: space-around;
+    
 }   
 
 .container-row{
     display:flex;
     flex-direction:row;
+    
 }
 .container-row-space{
     display:flex;
     flex-direction: row;
-    /* justify-content: space-around ; */
+    justify-content: space-around ;
     
 }
+ .start{
+    align-items: start ;
+} 
 .wrap{
     flex-wrap: wrap;
 }
@@ -271,6 +327,13 @@ a {
 .end{
     align-self: flex-end;
 }
+.cntr-vert{
+    align-items: center;
+}
+.cntr-horz{
+    justify-content: center;
+}
+
 
 /* styling */
 .offwhite {
@@ -333,6 +396,9 @@ p{
 }
 .p-small{
     width: 20vw}
+.p-small-plus{
+    width: 35vw;
+}
 
 .p-med{
     width: 50vw}
