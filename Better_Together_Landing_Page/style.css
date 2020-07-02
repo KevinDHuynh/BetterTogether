@@ -54,7 +54,12 @@ a {
 }
 
 .sticky {
+<<<<<<< Updated upstream
   position: fixed;
+=======
+  /* position: fixed; */
+  position: sticky;
+>>>>>>> Stashed changes
   top: 0;
   width: 100%;
 }
@@ -179,8 +184,11 @@ a {
     color: #00473e;
 }
 
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 /* experience*/
 .carousel-container{
     width: 63%;
@@ -223,6 +231,17 @@ a {
 
 }
 
+<<<<<<< Updated upstream
+=======
+
+
+/*Foundation*/
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+}
+
+>>>>>>> Stashed changes
 /* attempts at responsiveness */
 @media only screen and (max-width: 1300px) {
     .main-nav {
@@ -333,6 +352,13 @@ a {
 .cntr-horz{
     justify-content: center;
 }
+<<<<<<< Updated upstream
+=======
+.cntr{
+    justify-content: center;
+    align-items: center;
+}
+>>>>>>> Stashed changes
 
 
 /* styling */
@@ -363,7 +389,11 @@ a {
     padding: .5em 1.5em;
 }
 
+<<<<<<< Updated upstream
 #cta-big-btn{
+=======
+#ctaBigBtn{
+>>>>>>> Stashed changes
     font-size: 1em;
     border-radius: 25px;
     padding: .5em 1.5em;
