@@ -3,7 +3,7 @@ const authenticate = require('../middleware/authenticate');
 const router = express.Router();
 
 // HabitRecorder model
-const HabitRecorder = require('../../models/HabitRecorder');
+const HabitRecorder = require('../../models/HabitRecorder').HabitRecorder;
 
 // GET: /api/habit_recorders --> PUBLIC
 // Access all DB entries
