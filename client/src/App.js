@@ -1,21 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from '@material-ui/core/Button';
+import {Button, Container} from '@material-ui/core/';
 
 import { Provider } from 'react-redux';
 import store from './store';
 
 import HabitList from './components/HabitList';
+import ItemModal from './components/ItemModal';
 
 import AppBar from './components/AppBar';
 import './App.css';
+
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
         <AppBar />
-        <HabitList />
+        <Container>
+          <ItemModal />
+          <HabitList />
+        </Container>
       </div>
     </Provider>
   );
