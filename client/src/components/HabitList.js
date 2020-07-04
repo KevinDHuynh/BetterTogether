@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, List, ListItem, IconButton, Button } from '@material-ui/core';
+import { Container, List, ListItem, IconButton, Card, CardActions, CardContent, Typography} from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { connect } from 'react-redux';
 import { getItems, deleteItem } from '../actions/itemActions';
@@ -20,19 +20,30 @@ class HabitList extends Component{
         const { items } = this.props.item;
         return (
             <Container>
-                
                 <List component="nav">
-                    {items.map(({id, name}) => (
+                    {items.map(({id,description,predicted_longterm_benefit,perceived_benefit,estimated_difficulty,title,type}) => (
                         <ListItem>
-                            <IconButton 
-                                aria-label = "delete" 
-                                fontSize = "small" 
-                                color = "secondary"  
-                                onClick = {this.onDeleteClick.bind(this, id)}
-                            >
-                                <DeleteIcon/>
-                            </IconButton>
-                            {name}
+                            <Card>
+                                <CardContent>
+                                    <Typography color="textSecondary" gutterBottom>
+                                    {title}
+                                    </Typography>
+                                    <Typography variant="body2" component="p">
+                                    {description}
+                                    </Typography>
+                                
+                                </CardContent>
+                                <CardActions>
+                                    <IconButton 
+                                        aria-label = "delete" 
+                                        fontSize = "small" 
+                                        color = "secondary"  
+                                        onClick = {this.onDeleteClick.bind(this, id)}
+                                    >
+                                        <DeleteIcon/>
+                                    </IconButton>
+                                </CardActions>
+                            </Card>
                         </ListItem>
                     ))}
                 </List>

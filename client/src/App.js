@@ -18,8 +18,8 @@ function App() {
       <div className="App">
         <AppBar />
         <Container>
-          <ItemModal />
           <HabitList />
+          <ItemModal />
         </Container>
       </div>
     </Provider>
