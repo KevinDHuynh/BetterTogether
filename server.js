@@ -1,12 +1,16 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors')
 const config = require('config')
+
 
 //Instantiate Express app
 const app = express();
 
 //Bodyparser
 app.use(express.json());
+
+app.use(cors())
 
 //API routes
 app.use('/api/habit_recorders', require('./routes/api/habit_recorders'));   // habit entities
