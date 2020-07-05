@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {Button, Container} from '@material-ui/core/';
+import React, {useEffect} from 'react';
 
 import { Provider } from 'react-redux';
 import store from './store';
+import { loadUser } from './actions/authActions'
+
+import { Container } from '@material-ui/core/'
 
 import HabitList from './components/HabitList';
 import ItemModal from './components/ItemModal';
@@ -11,8 +12,11 @@ import ItemModal from './components/ItemModal';
 import AppBar from './components/AppBar';
 import './App.css';
 
+const App = () => {
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
 
-function App() {
   return (
     <Provider store={store}>
       <div className="App">
@@ -24,6 +28,6 @@ function App() {
       </div>
     </Provider>
   );
-}
+};
 //ReactDOM.render(<App />, document.querySelector('#App'));
 export default App;

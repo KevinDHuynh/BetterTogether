@@ -6,7 +6,7 @@ function authenticate(req, res, complete) {
     // Validate token
     const token = req.header('x-auth-token');
     if (!token) {
-        res.status(401).json({ error_msg: 'User unauthorized- token does not exist' });
+        return res.status(401).json({ error_msg: 'User unauthorized- token does not exist' });
     }
 
     // Verify token and add user 
