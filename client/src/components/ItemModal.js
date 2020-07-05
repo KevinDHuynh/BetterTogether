@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import {Dialog, TextField, Button, DialogTitle} from '@material-ui/core/';
+import {Dialog, TextField, Button, DialogTitle,DialogActions, List, ListItem} from '@material-ui/core/';
 import { connect } from 'react-redux';
 import { addItem } from '../actions/itemActions';
-import { v4 as uuid } from 'uuid';
-import { ADD_ITEM } from '../actions/types';
 
 class ItemModal extends Component{
     state = {
         dialog: false,
-        name: ''
+        title: '',
+        type:'',
+        description: '',
+        predicted_longterm_benefit:'',
+        estimated_difficulty:'',
+        estimated_time:'',
     }
     
     toggle = () => {
@@ -17,15 +20,19 @@ class ItemModal extends Component{
         });
     }
     onChange = e => {
-        this.setState({ [e.target.name]: e.target.value });
+        this.setState({ [e.target.label]: e.target.value });
     }
 
     onSubmit = e => {
         e.preventDefault();
 
         const newItem = {
-            id: uuid(),
-            name: this.state.name
+            title: this.state.title,
+            type: this.state.type,
+            description: this.state.description,
+            predicted_longterm_benefit: this.state.predicted_longterm_benefit,
+            estimated_difficulty: this.state.estimated_difficulty,
+            estimated_time: this.state.estimated_time
         }
 
         this.props.addItem(newItem);
@@ -38,7 +45,7 @@ class ItemModal extends Component{
     render() {
         return(
             <div>
-                <Button variant="contained" color="primary" onClick={this.toggle}>
+                <Button variant="contained" color="primary" onClick={this.toggle} style={{margin: '2em'}} >
                     Add Habit
                 </Button>
 
@@ -46,11 +53,24 @@ class ItemModal extends Component{
                 aria-labelledby="new-habit-dialog"
                 open={this.state.dialog}
                 >
-                <DialogTitle id="new-habit-dialog">Create New Habit</DialogTitle>
-                <form onSubmit={this.onSubmit}>
-                    <TextField label="name" name="name" id="item" onChange={this.onChange}/>
-                    <Button variant="contained" color="primary" onClick={this.onSubmit}>Add Item</Button>
-                </form>
+                    <DialogTitle id="new-habit-dialog">Create New Habit</DialogTitle>
+                    <form onSubmit={this.onSubmit}>
+                        <List>
+                            <ListItem>
+                                <TextField label="title" margin="dense" onChange={this.onChange}/>
+                            </ListItem>
+                            <ListItem>
+                                <TextField label="description" margin="dense" onChange={this.onChange}/>
+                            </ListItem>
+                            <ListItem>
+                                <TextField label="type" margin="dense" onChange={this.onChange}/>
+                            </ListItem>
+                        </List>
+                    </form>
+                    <DialogActions>
+                        <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                        <Button color="primary" onClick={this.onSubmit}>Add Item</Button>
+                    </DialogActions>
                 </Dialog>
             </div>
             
