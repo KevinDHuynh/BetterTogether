@@ -11,6 +11,33 @@ import {
     REGISTER_FAIL
 } from "../actions/types";
 
+
+// Register
+export const register = ({ name, username, password}) => dispatch => {
+    // Headers
+    const config = {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+
+    //Request body
+    const body = JSON.stringify({ name, username, password });
+
+    axios.post('http://localhost:5000/api/register', body, config)
+        .then(res => dispatch({
+            type: REGISTER_SUCCESS,
+            payload: res.data
+        }))
+        .catch(err => {
+            dispatch(returnErrors(err.response.data, err.response.status, 'REGISTER_FAIL'));
+            dispatch({
+                type: REGISTER_FAIL
+            });
+        });
+}  
+
+
 // Check token, load user
 export const loadUser = () => (dispatch, getState) => {
     // User loading 
