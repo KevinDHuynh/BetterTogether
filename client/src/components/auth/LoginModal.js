@@ -83,10 +83,10 @@ class LoginModal extends Component{
                     <form onSubmit={this.onSubmit}>
                         <List>
                             <ListItem>
-                                <TextField label="username" name="username" margin="dense" onChange={this.onChange}/>
+                                <TextField label="Username" name="username" margin="dense" onChange={this.onChange}/>
                             </ListItem>
                             <ListItem>
-                                <TextField label="password" name="password" margin="dense" onChange={this.onChange}/>
+                                <TextField label="Password" name="password" margin="dense" onChange={this.onChange}/>
                             </ListItem>
                         </List>
                     </form>
