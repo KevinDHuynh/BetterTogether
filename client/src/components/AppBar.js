@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 
 import RegisterModal from './auth/RegisterModal';
 import Logout from './auth/Logout'
+import LoginModal from './auth/LoginModal';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,6 +46,7 @@ export default function MenuAppBar() {
             BetterTogether
           </Typography>
           <RegisterModal />
+          <LoginModal />
           <Logout />
         </Toolbar>
       </AppBar>
