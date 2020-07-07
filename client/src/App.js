@@ -9,7 +9,7 @@ import { Container } from '@material-ui/core/'
 import HabitList from './components/HabitList';
 import ItemModal from './components/ItemModal';
 
-import AppBar from './components/AppBar';
+import AppNavBar from './components/AppNavBar';
 import './App.css';
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <div className="App">
-        <AppBar />
+        <AppNavBar />
         <Container>
           <HabitList />
           <ItemModal />

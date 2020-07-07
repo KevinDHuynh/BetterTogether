@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Dialog, TextField, Button, DialogTitle,DialogActions, List, ListItem} from '@material-ui/core/';
+import {Dialog, TextField, Button, DialogTitle,DialogActions, List, ListItem, MenuItem} from '@material-ui/core/';
 import { connect } from 'react-redux';
 import { addItem } from '../actions/itemActions';
 
@@ -14,13 +14,32 @@ class ItemModal extends Component{
         estimated_time:'',
     }
     
+    types = [
+        {
+          value: 'Physical',
+          label: 'Physical',
+        },
+        {
+          value: 'Sleep',
+          label: 'Sleep',
+        },
+        {
+          value: 'Creative',
+          label: 'Creative',
+        },
+        {
+          value: 'Pleasure',
+          label: 'Pleasure',
+        },
+      ];
+    
     toggle = () => {
         this.setState({
             dialog: !this.state.dialog
         });
     }
     onChange = e => {
-        this.setState({ [e.target.label]: e.target.value });
+        this.setState({ [e.target.name]: e.target.value });
     }
 
     onSubmit = e => {
@@ -57,13 +76,19 @@ class ItemModal extends Component{
                     <form onSubmit={this.onSubmit}>
                         <List>
                             <ListItem>
-                                <TextField label="title" margin="dense" onChange={this.onChange}/>
+                                <TextField label="Name of Habit" name="title" margin="dense" onChange={this.onChange}/>
                             </ListItem>
                             <ListItem>
-                                <TextField label="description" margin="dense" onChange={this.onChange}/>
+                                <TextField label="Brief Description" name="description" margin="dense" onChange={this.onChange}/>
                             </ListItem>
                             <ListItem>
-                                <TextField label="type" margin="dense" onChange={this.onChange}/>
+                                <TextField select variant="standard" fullWidth="True" label="Type of Habit" name="type" margin="dense" onChange={this.onChange}>
+                                {this.types.map((option) => (
+                                    <MenuItem key={option.value} value={option.value}>
+                                    {option.label}
+                                    </MenuItem>
+                                ))}
+                                </TextField>
                             </ListItem>
                         </List>
                     </form>

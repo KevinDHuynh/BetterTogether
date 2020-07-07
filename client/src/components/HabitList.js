@@ -31,7 +31,6 @@ class HabitList extends Component{
                                     <Typography variant="body2" component="p">
                                     {description}
                                     </Typography>
-                                
                                 </CardContent>
                                 <CardActions>
                                     <IconButton 
