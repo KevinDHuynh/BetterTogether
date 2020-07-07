@@ -4,9 +4,10 @@
   <title>Better Together</title>
   <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
-<body class=" container-column offwhite" >
+<body class="container-column offwhite" >
+  <!-- nav bar -->
   <nav class="offwhite sticky">
-      <ul class="main-nav">
+      <ul class="main-nav container cntr">
           <li> <a href="#hero"> <img src="./img/logo_nav.png" alt=""></li>
           <li><a href="#hero">Better Together</a></li>
           <li class="push"><a href="#benefits">Benefits</a></li>
@@ -14,33 +15,20 @@
           <li><a href="#experience">Experience</a></li>
           <li ><a href="#foundation">Foundation</a></li>
           <li><button class ="flat-btn modal-log-btn">Login</button></li>
-<<<<<<< Updated upstream
-          <li><button class="pop-btn modal-sign-btn"> Sign Up</button></li>
-      </ul>
-  </nav>
-  <div class=" cover cover-image">
-    <section class="container-cover ">
-      <H5 id=catchline>BE BETTER FOR THE PEOPLE WHO MATTER</H5>
-      <H1 id="headline">Our Journey Begins Today!</H1>
-      <button id=cta-big-btn class="pop-btn modal-sign-btn end"> Lets Get Started</button>
-      <!-- <img class="cover fullscreen" src="./img/hero_image.jpg"> -->
-    </section>
-  </div>
-  <div class=" zone container-column-space  margin-std" >
-=======
           <li><button class="pop-btn modal-sign-btn" id="signBtn1"> Sign Up</button></li>
       </ul>
   </nav>
-  <div class=" cover cover-image" id="hero">
-    <section class="container-cover ">
-      <H5 id=catchline>BE BETTER FOR THE PEOPLE WHO MATTER</H5>
-      <H1 id="headline">Our Journey Begins Today!</H1>
+  <!-- cover -->
+  <div class=" zone container horz-cntr vert-start cover-image" id="hero">
+    <section class=" zone container-column margin-cover ">
+      <h6 id=catchline>BE BETTER FOR THE PEOPLE WHO MATTER</h6>
+      <h1 id="headline">Our Journey Begins Today!</h1>
       <button id="ctaBigBtn" class="pop-btn modal-sign-btn end"> Lets Get Started</button>
       <!-- <img class="cover fullscreen" src="./img/hero_image.jpg"> -->
     </section>
   </div>
+  <!-- benefits -->
   <div class=" zone container-column-space  margin-std" id="benefits" >
->>>>>>> Stashed changes
       <section>
         <H3>ipsum lorem</H3>
         <p class="p-med">ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus accusamus reiciendis eius explicabo consequatur, aliquam perferendis maxime magnam, nemo vel! Corporis reiciendis, quo eos ea minus repellat praesentium alias?</p>
@@ -66,12 +54,8 @@
         </ul>
       </section>
   </div>
-
-<<<<<<< Updated upstream
-  <div class="zone container-row-space cntr-vert margin-std">
-=======
-  <div class="zone container-row-space cntr-vert margin-std" id="theLens">
->>>>>>> Stashed changes
+  <!--  the lens -->
+  <div class="zone container-row-space vert-cntr margin-std" id="theLens">
     <section class="container-column">
       <h6>ipsum</h6>
       <img class="img-align" src="./img/undraw_graph_50.png" alt="">
@@ -81,14 +65,9 @@
       <p class="p-small-plus">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla odit repudiandae expedita ducimus neque corrupti error, quod deleniti nesciunt cupiditate vero eligendi vitae aliquid ex qui deserunt esse. Voluptates, dolorem?</p>
     </section>
   </div>
-
-<<<<<<< Updated upstream
-  <div class="zone container-row-space margin-std ">
-=======
-  <div class="zone container-row-space margin-std " id="experience">
->>>>>>> Stashed changes
-  <!-- <div class="zone container-row-space">   -->
-        <div class= "carousel-container">
+  <!-- experience -->
+  <div class="zone container margin-std " id="experience">
+    <div class= "carousel-container">
           <img src="./img/left-chevron.svg" id="prevBtn"></img>
           <img src="./img/right-chevron.svg" id ="nextBtn"></img>
           <div class="carousel-slide container ">
@@ -100,13 +79,10 @@
              <img src="./img/5m.jpg" alt="">
              <img src="./img/1mc.jpg" id="firstClone" alt="">
           </div>
-        </div>
+    </div>
 
   </div>
-<<<<<<< Updated upstream
-=======
-
-
+  <!-- foundation -->
   <div class= "zone container-column-space margin-std" id="foundation">
     <h2>Dont Know Where to Start!?</h2>
     <div class= "container-row-space">
@@ -124,13 +100,12 @@
       </div>
     </div>
   </div>
+  <!-- end CTA -->
   <div class="zone container-column cntr">
     <h2>Ending CTA Call line here</h2>
     <button class="pop-btn" id="signBtn3">End CTA</button>
   </div>
->>>>>>> Stashed changes
-  <!-- <button id="prevBtn">prev</button>
-  <button id="nextBtn">next</button> -->
+  <!-- modal sign up -->
   <div class="modal-sign-bg">
     <div class="modal">
       <h2>Sign Up For Better Together!</h2>
@@ -144,6 +119,7 @@
       <span class="modal-sign-close">X</span>  
     </div>
   </div>
+  <!-- modal log in -->
   <div class="modal-log-bg">
     <div class="modal">
       <h2>Log In To Better Together!</h2>
@@ -155,6 +131,7 @@
       <span class="modal-log-close">X</span>  
     </div>
   </div>
+  <!-- scripts -->
   <script src="modal.js"></script>
   <script src="carousel.js"></script>
 </body>
