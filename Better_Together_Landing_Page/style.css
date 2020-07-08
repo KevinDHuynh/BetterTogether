@@ -1,13 +1,25 @@
+/* notes for grid system; set up in intervals of 30; means a 1080 screen is broken up into 36 sections and 720 broken up int o 24 */
 /* styling for body and major divs */
 body {
     padding-top: 130px; /* pushes Hero image down so fixed nav bar doesnt ccover it*/
     margin: 0 auto;
-    font-size:2em;
+    /* font-size:1.59em; sets  p at 20px for standard browsers with default font size of 16 px */
+    font-size: 27px;
     font-family: fantasy, sans-serif;
+   
 }
 .zone {
-    height: 90vh; 
+
+    height: 27em; /*1.11*27  75% 1080 screen*/
     color: #00473e;
+    margin-top:1.11em ;
+    margin-bottom:2.22em;
+    margin-left: 5.55em ;
+    margin-right:5.55em ;
+   
+
+
+
 }
 
 /* nav bar */
@@ -17,7 +29,7 @@ body {
     border:1px solid #bbb;
     margin: 0;
     padding: 0em 1.25em 0em 1.25em;
-    font-size: 0.8em; 
+    font-size: 0.75em; 
 }
 .main-nav:hover {
    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
@@ -27,6 +39,7 @@ body {
 .margin-cover{
     margin-left: 30vw;
     margin-right: 20vw;
+    margin-top: 0;
 }
 
 .push {
@@ -54,7 +67,8 @@ a {
     background-image: url(./img/hero_image.jpg); 
     background-repeat:no-repeat;
     background-size:contain;
-    background-position:center;
+    background-position:top;
+    margin-top:0;
 }
 
 #catchline{
@@ -352,35 +366,60 @@ a {
     margin-bottom: 70vh;
 }
 
+/* header font scaling using W3 Typography reccomendaitons; in order to keep grid like and vertical rythm we set line height to the nearest multiple of the line height of 30px that stems from p*/
 h1{
-    font-size:2.4em;
+    font-size:2em;
+    line-height: 1.111; /*60px*/
+    margin-top: .555em; 
+    margin-bottom: .555em;
 }
 h2{
-    font-size:2.0em;}
+    font-size:1.5em;
+    line-height: 1.111; /*45px*/
+    margin-top: .74em; 
+    margin-bottom: .74em;
+}
 h3{
-    font-size:1.6em;}
-h4{
     font-size:1.2em;
-    margin: 0;
+    line-height: 1.38; /*45px*/ 
+    margin-top: .925em;
+    margin-bottom:.925em;
+}
+h4{
+    font-size:1em;
+    line-height: 1.11; /*30px*/
+    margin-top: 1.11em;
+    margin-bottom:1.11em;
     padding: .5em 0;}
-h5{
-    font-size:1.0em;}
-h6{
-    font-size:.5em;}
-
 p{
     font-size:.75em;
-    line-height: 1.5em;
+    line-height: 1.5; /*30px*/
+    /* margin:1.5em 1.5em; */
+    margin-top: 1.5em;
+    margin-bottom:1.5em;
     color:#475d5b;
-    margin:0;
 }
+h5{
+    font-size:.888 em; /*24 px*/
+    line-height: 1.25;
+    margin-top: 1.25em;
+    margin-bottom:1.25em;
+}
+h6{
+    font-size:.5em; /*14px*/
+    line-height: 2.22em;
+    margin-top: 2.22em;
+    margin-bottom: 2.22em;
+}
+
+/*  made based of w3 school standards of 45-75 lines 66 being ideal */
 .p-small{
-    width: 20vw}
+    width: 20em}
 .p-small-plus{
-    width: 35vw;
+    width: 30em;
 }
 .p-med{
-    width: 50vw}
+    width: 30em}
 
 
 li{
@@ -405,4 +444,17 @@ li{
     zoom: 0.8;
     /* -moz-transform: scale(0.8); */
 }
-    
+
+.scaled {
+    transform: scale(0.7); /* Equal to scaleX(0.7) scaleY(0.7) */
+    background-color: pink;
+  }
+
+.mar-top-zero{
+    margin-top: 0;
+}
+.mar-bottom-zero{
+    margin-bottom: 0;
+}
+
+.shrink{flex-shrink: 1;}
