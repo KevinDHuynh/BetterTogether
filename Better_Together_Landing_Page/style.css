@@ -1,4 +1,10 @@
+/* .top{
+   margin-top: 0em;
+   padding-top: 0em;
+
+} */
 /* notes for grid system; set up in intervals of 30; means a 1080 screen is broken up into 36 sections and 720 broken up int o 24 */
+/* 1080/27 = 40 sections of the screenwith  27 inch leadding */
 /* styling for body and major divs */
 body {
     padding-top: 130px; /* pushes Hero image down so fixed nav bar doesnt ccover it*/
@@ -10,16 +16,60 @@ body {
 }
 .zone {
 
-    height: 27em; /*1.11*27  75% 1080 screen*/
+    height: 27.75em; /*1.11*27  75% 1080 screen; vaue 27*1.11/
+    /* height: 50em; 1.11*27  75% 1080 screen */
     color: #00473e;
     margin-top:1.11em ;
-    margin-bottom:2.22em;
+    margin-bottom:3.33em;
     margin-left: 5.55em ;
     margin-right:5.55em ;
-   
+    /* padding-top:1.11em ;
+    padding-bottom:3.33em;
+    padding-left: 5.55em ;
+    padding-right:5.55em ; */
+}
 
+.zoneb {
 
+    height: 33.33em; /*1.11*27  75% 1080 screen; vaue 27*1.11/
+    /* height: 50em; 1.11*27  75% 1080 screen */
+    color: #00473e;
+    /* margin-top:1.11em ;
+    margin-bottom:3.33em;
+    margin-left: 5.55em ;
+    margin-right:5.55em ; */
+    padding-top:1.11em ;
+    padding-bottom:3.33em;
+    padding-left: 5.55em ;
+    padding-right:5.55em ;
+    background-color:  yellow;
+}
 
+.zonec {
+
+    height: 19.98em; /*1.11*27  75% 1080 screen; vaue 27*1.11/
+    /* height: 50em; 1.11*27  75% 1080 screen */
+    color: #00473e;
+    /* margin-top:1.11em ;
+    margin-bottom:3.33em;
+    margin-left: 5.55em ;
+    margin-right:5.55em ; */
+    padding-top:1.11em ;
+    padding-bottom:3.33em;
+    padding-left: 5.55em ;
+    padding-right:5.55em ;
+    background-color:  grey;
+    /* position: relative; */
+}
+
+.img-50{
+    height: 20em ;
+    width: 25em;
+}
+
+section{
+    margin-top:1.11em ;
+    margin-bottom:2.22em;
 }
 
 /* nav bar */
@@ -198,6 +248,9 @@ a {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 1em;
 }
+.card-img{
+    border-radius: 1em; 
+}
 
 /* attempts at responsiveness */
 @media only screen and (max-width: 1300px) {
@@ -361,9 +414,9 @@ a {
     font-size: 1em;
     border-radius: 25px;
     padding: .5em 1.5em;
-    margin-right: 25vh;
+    /* margin-right: 25vh;
     margin-left: 25vh;
-    margin-bottom: 70vh;
+    margin-bottom: 70vh; */
 }
 
 /* header font scaling using W3 Typography reccomendaitons; in order to keep grid like and vertical rythm we set line height to the nearest multiple of the line height of 30px that stems from p*/
@@ -458,3 +511,13 @@ li{
 }
 
 .shrink{flex-shrink: 1;}
+
+.txt-cntr{text-align: center;}
+
+.z-green{
+    background-color: 00473e;
+}
+
+.add-height{
+    
+}
