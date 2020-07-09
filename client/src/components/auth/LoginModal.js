@@ -68,7 +68,7 @@ class LoginModal extends Component{
     render() {
         return(
             <div>
-                <Button onClick={this.toggle} color="inherit" style={{margin: '2em'}} >
+                <Button onClick={this.toggle} color="inherit">
                     Login
                 </Button>
 
