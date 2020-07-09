@@ -6,7 +6,7 @@ import { returnErrors } from './errorActions';
 export const getItems = () => dispatch => {
     dispatch(setItemsLoading());
     axios
-        .get('http://localhost:5000/api/habit_recorders')
+        .get('/api/habit_recorders')
         .then(res => 
             dispatch({
                 type: GET_ITEMS,
@@ -19,7 +19,7 @@ export const getItems = () => dispatch => {
 
 export const addItem = item => (dispatch, getState) => {
     axios
-        .post('http://localhost:5000/api/habit_recorders', item, tokenConfig(getState))
+        .post('/api/habit_recorders', item, tokenConfig(getState))
         .then(res =>
             dispatch({
                 type: ADD_ITEM,
@@ -33,7 +33,7 @@ export const addItem = item => (dispatch, getState) => {
 
 export const deleteItem = id => (dispatch, getState) => {
     axios
-        .delete(`http://localhost:5000/api/habit_recorders/${id}`, tokenConfig(getState))
+        .delete(`/api/habit_recorders/${id}`, tokenConfig(getState))
         .then(res => 
             dispatch({
                 type: DELETE_ITEM,
