@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors')
 const config = require('config')
+const path = require('path');
 
 
 //Instantiate Express app
@@ -16,6 +17,17 @@ app.use(cors())
 app.use('/api/habit_recorders', require('./routes/api/habit_recorders'));   // habit entities
 app.use('/api/register', require('./routes/api/register'));                 // registration
 app.use('/api/login', require('./routes/api/login'))                        // login
+
+
+// Server static assets if in production
+if(process.env.NODE_ENV === 'production') {
+    //Set static folder
+    app.use(express.static('client/build'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+}
 
 //Connect to DB
 const db = config.get('mongoURI');
