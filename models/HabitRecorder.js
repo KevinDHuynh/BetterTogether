@@ -83,6 +83,10 @@ const HabitSchema = new Schema({
     actual_time: {
         type: String, //enum: time
         default: time.LESS_THAN_A_WEEK
+    },
+    user_id: {
+        type: String,
+        required: true
     }
 });
 
