@@ -1,3 +1,18 @@
 /* notes for grid system; set up in intervals of 30; means a 1080 screen is broken up into 36 sections and 720 broken up int o 24 */
 /* 1080/27 = 40 sections of the screenwith  27 inch leadding */
 /* styling for body and major divs */
+\
+
+
+TODO: 
+
+major:
+ fix logo spacing
+
+
+minor:
+resize BT logo height 45px
+
+
+micro:
+fix line height on the  a tags in the nav bar;  it ignores the line-height, would be nice to have for consistnecy but does not inerupt typography because they are single elements 
