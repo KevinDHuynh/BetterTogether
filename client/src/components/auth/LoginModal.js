@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {Dialog, TextField, Button, DialogTitle,DialogActions, List, ListItem} from '@material-ui/core/';
-import {Alert} from '@material-ui/lab';
+import { Dialog, TextField, Button, DialogTitle,DialogActions, List, ListItem } from '@material-ui/core/';
+import { Alert } from '@material-ui/lab';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/authActions'

@@ -6,10 +6,17 @@ import { getItems, deleteItem } from '../actions/itemActions';
 import PropTypes from 'prop-types';
 
 class HabitList extends Component{
+    componentDidUpdate(prevProps) {
+        if (this.props.isAuthenticated !== prevProps.isAuthenticated) {
+            this.props.getItems();
+        }
+    }
 
     componentDidMount(){
         this.props.getItems();
     }
+
+
 
     onDeleteClick = (id) => {
         this.props.deleteItem(id);
@@ -55,11 +62,14 @@ class HabitList extends Component{
 
 HabitList.propTypes = {
     getItems: PropTypes.func.isRequired,
-    item: PropTypes.object.isRequired
+    item: PropTypes.object.isRequired,
+    isAuthenticated: PropTypes.bool,
 }
 
 const mapStateToProps = (state) => ({
-    item: state.item
+    auth: state.auth,
+    item: state.item,
+    isAuthenticated: state.auth.isAuthenticated,
 });
 
 export default connect(

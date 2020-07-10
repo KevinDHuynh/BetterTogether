@@ -3,10 +3,10 @@ import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING} from './types';
 import { tokenConfig } from './authActions';
 import { returnErrors } from './errorActions';
 
-export const getItems = () => dispatch => {
+export const getItems = () => (dispatch, getState) => {
     dispatch(setItemsLoading());
     axios
-        .get('/api/habit_recorders')
+        .get('/api/habit_recorders', tokenConfig(getState))
         .then(res => 
             dispatch({
                 type: GET_ITEMS,
