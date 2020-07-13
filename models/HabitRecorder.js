@@ -3,10 +3,9 @@ const Schema = mongoose.Schema;
 
 // enums
 const type = {
-    PHYSICAL: 'Physical',
+    PHYSICAL: 'Physical Health',
     CREATIVE: 'Creative',
-    SLEEP: 'Sleep',
-    PLEASURE: 'Pleasure'
+    MINDFULNESS: 'Mindfulness'
 };
 
 const benefit = {
@@ -31,19 +30,19 @@ const difficulty = {
 };
 
 const time = {
-    LESS_THAN_A_WEEK: '<1 Week',
-    ONE_WEEK: '1 Week',
-    TWO_WEEKS: '2 Weeks',
-    THREE_WEEKS: '3 Weeks',
-    ONE_MONTH: '1 Month',
-    EIGHT_WEEKS: '2 Months',
-    TWELVE_WEEKS: '3 Months',
-    TWENTYONE_WEEKS: '6 Months',
-    ONE_YEAR: '1 Year',
-    TWO_YEARS: '2 Years',
-    FIVE_YEARS: '5 Years',
-    TEN_YEARS: '10 Years',
-    GREATER_THAN_TEN_YEARS: '>10 Years'
+    FLEX: 'Flexible',
+    ACTIVE: 'Active',
+    INTERMITTENT: 'Intermittent',
+    ONE_TO_FIVE_MIN: '1-5 Minutes',
+    FIVE_TO_TEN_MIN: '5-10 Minutes',
+    TEN_TO_TWENTY_MIN: '10-20 Minutes',
+    TWENTY_TO_THIRTY_MIN: '20-30 Minutes',
+    THIRTY_TO_FORTYFIVE_MIN: '30-45 Minutes',
+    FORTYFIVE_TO_SIXTY_MIN: '45-60 Minutes',
+    ONE_TO_TWO_HR: '1-2 Hours',
+    TWO_TO_FIVE_HR: '2-5 Hours',
+    FIVE_TO_TEN_HR: '5-10 Hours',
+    MORE_THAN_TEN_HR: '>10 Hours'
 };
 
 // HabitRecorder schema
@@ -60,9 +59,9 @@ const HabitSchema = new Schema({
         type: String,
         default: ""
     },
-    predicted_longterm_benefit: {
-        type: Number, //enum: benefit
-        default: benefit.ONE
+    predicted_benefit: {
+        type: String,
+        default: ""
     },
     perceived_benefit: {
         type: Number, //enum: benefit
@@ -78,11 +77,11 @@ const HabitSchema = new Schema({
     },
     estimated_time: {
         type: String, //enum: time
-        default: time.LESS_THAN_A_WEEK
+        default: time.FLEX
     },
     actual_time: {
         type: String, //enum: time
-        default: time.LESS_THAN_A_WEEK
+        default: time.FLEX
     },
     user_id: {
         type: String,
