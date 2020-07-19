@@ -3,7 +3,7 @@
 /* header font scaling using W3 Typography reccomendaitons; in order to keep grid like and vertical 
 rythm we set line height to the nearest multiple of the line height of 30px that stems from p*/
 body {
-    padding-top: 75px; /*offset for cover cover down so fixed nav bar doesnt ccover it */
+    padding-top: 90px; /*offset for cover cover down so fixed nav bar doesnt ccover it */
     margin: 0 auto;
     font-size:1.6667em; /*27px; need 26.6666667 px font if we want 20px p*/
     /* font-size: 26.666px; */
@@ -58,23 +58,7 @@ a{
     text-decoration: none;
     color: #00473e ;
     font-size:.75em;     /*20px*/
-    line-height: 1.5 !important;     /*30px*/
-    margin-top: 1.5em;
-    margin-bottom:1.5em;
-  
-}
-
-button{
-    text-decoration: none;
-    color: #00473e ;
-    font-size: .75em;
-}
-
-/*  clean up */
-.img-50{
-    /* og svg size 1122x647  */
-    height: 20em ;
-    width: 25em;
+    line-height: 1.5em !important;     /*30px*/
 }
 
 
@@ -96,11 +80,34 @@ button{
 }
 
 .main-nav >li {
-    padding: 1.125em;
+    /* padding: 1.125em; */
+    padding: .5625em 1.125em; /* top and bottom to accomidate button alignment*/
+    margin-top: .525em; /*14 px margin to make room for container border of 1 px 14 + 1 = 15*/
+    margin-bottom:.525em;
     height: 1.125em;
-    text-align: center;
-    vertical-align: center;
+    border-width:1px;
+    border-right:1px;
+    border: solid #00473e;
+    border-width: 0 1px 0 0;
+  }
+
+.nav-special{
+     /* text-align: start; */
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+       margin-top: 0.6em !important; /*override to accomidate button border for alingment in parent container*/ 
+      height: auto !important;
+      border-width: 0 !important;
 }
+
+
+.no-border{
+    border-width: 0!important;
+}
+.nav-border-left{
+    border-width: 0 1px 0 1px  !important;
+}
+
 
 .sticky {
     height:3.375em;
@@ -109,6 +116,20 @@ button{
     top: 0;
     width: 100%;
 }
+
+/*  clean up */
+.img-50{
+    /* og svg size 1122x647  half 561x 323.5    570/30= 19 *1.125=21.375 | 11 *1.125 =12.375 | make dimentions fit graph:  */
+    height:  12.375em;
+    width: 21.3750em;
+    align-self: center;
+}
+
+.nav-logo-resize{
+    height: 60px;
+}
+
+
 .main-nav:hover {
    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
@@ -181,22 +202,22 @@ button{
 /* cover */
 /* 26.6667/30 =1.125; for 1080/30 =36rows 720/30=27rows */
 .zonec {
-    height: 22.21em; 
+    height: 20.25em; 
     color: #00473e;
-    padding-top:1.11em ;
-    padding-bottom:3.33em;
-    padding-left: 5.55em ;
-    padding-right:5.55em ;
+    padding-top:1.125em ;
+    padding-bottom:3.375em;
+    padding-left: 5.625em ;
+    padding-right:5.625em ;
  }
 
 /* hook */
  .zoneb {
     height: 17.205em; /*1.11*27  75% 1080 screen; vaue 27*1.11*/
     color: #ffffff;
-    padding-top:1.11em ;
+    padding-top:1.125em ;
     padding-bottom:3.33em;
-    padding-left: 5.55em ;
-    padding-right:5.55em ;
+    padding-left: 5.625em ;
+    padding-right:5.625em ;
     background-color:   #00473e;
 }
 
@@ -390,30 +411,37 @@ button{
 
 /* styling */
 .offwhite {
-    background: #f2f7f5; /* Old browsers */
+    background: #f2f7f5; 
 }
 
 /* button syling */
 .flat-btn{
     cursor: pointer;
     background-color:#f2f7f5;
-    /* font-size: 1em; */
+    font-size: .75em; 
     color: #00473e;
-    border-width: 0;
+    margin-top: 2px;
+    margin-bottom: 2px; /* emulate default border */
+    border-width: 0px;
     border-radius: 4px;
-    padding: .5em 2em;
-    /* margin-left: 40px; */
+    padding: .75em 1.5em; /*.8em = 16 px in concjuction with 24px contentent and 2px borders is a 60 px tall button*/
+    /* font-family: Raleway;
+    font-weight: bold;
+    line-height: 1.5em;  */
 }
 
 .pop-btn{
     cursor: pointer;
     background-color:#faae2b;
     color: #00473e;
-    /* font-size: .75em;  */
+     font-size: .75em;  
     border-radius: 4px;
-    padding: .5em 1.125em;
+    /* padding: .5em 1.125em; */
+    padding: .75em 1.5em;
+    font-family: Raleway;
+    font-weight: bold;
+    /* line-height: 1.5em;  */
 }
-
 #ctaBigBtn{
     font-size: 1em;
     border-radius: 25px;
@@ -444,6 +472,13 @@ li{
 .mar-top-zero{
     margin-top: 0;
 }
-
+/* refactor */
+.pad-double{
+    padding-top: 4.5em;
+}
 
 .txt-cntr{text-align: center;}
+
+.underline-on-hover:hover {
+    text-decoration: underline;
+}
