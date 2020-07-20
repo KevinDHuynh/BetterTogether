@@ -23,3 +23,30 @@ Notes:
  work around to get propper nav bar alingment is to ignore the line height property for the buttons: we can do this without affecting the vertical rhythm becasue they vertically stand alone: to compensate for how it affect the size of the button we can add extra padding for the same effect
 
 Take Aways: borders matter when going for perfect spacing
+
+
+/* experience*/
+.carousel-container{
+    height:23.625em;
+    width: 36em;
+    /* width:59%; */
+    margin: auto;
+    overflow:hidden;
+    border: 5px solid black;
+    position: relative;
+}
+
+.carousel-slide{
+    /* display: flex; */
+    width: 100%;
+    height: 638px;
+}
+
+
+.background-img-d{
+    background-color: #d8779a ;
+    background-image: url("./img/undraw_experience_green.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 90%;
+}
