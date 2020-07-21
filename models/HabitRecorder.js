@@ -4,8 +4,7 @@ const Schema = mongoose.Schema;
 // enums
 const type = {
     PHYSICAL: 'Physical Health',
-    CREATIVE: 'Creative',
-    MINDFULNESS: 'Mindfulness'
+    MENTAL: 'Mental Health'
 };
 
 const benefit = {
