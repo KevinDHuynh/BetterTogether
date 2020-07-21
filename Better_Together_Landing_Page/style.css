@@ -4,17 +4,16 @@
 rythm we set line height to the nearest multiple of the line height of 30px that stems from p*/
 body {
     padding-top: 90px; /*offset for cover cover down so fixed nav bar doesnt ccover it */
-    margin: 0 auto;
-    font-size:1.6667em; /*27px; need 26.6666667 px font if we want 20px p*/
-    /* font-size: 26.666px; */
+    margin: 0 auto;    
+    font-size:1.6667em; /* 26.6666667 px to get  20px paragraphs with W3 Reccomended header Ratios*/
     font-family: Raleway, sans-serif;
 }
-/*  font size based off of w3 standards; margins(leadding) are 30px each; line heights are the the cosest multiple of 15px (I know that half a pixel doesnt exsit, howver knowing calculated value is nessacary for getting correct line and margin heights with em system)*/
+/*  font size based off of w3 standards; margins(leadding) are 30px each; line heights are the the cosest multiple of 15px, go to 4 decimals for consistency and accuracy*/
 h1{
-    font-size:2em;       /*53.3334px*/
-    line-height: 1.125; /*60px*/
-    margin-top:  .5624em; 
-    margin-bottom:.5624em;
+    font-size:    2em;     /*53.3334px*/
+    line-height:  1.125;   /*60px*/
+    margin-top:   0.5624em; 
+    margin-bottom:0.5624em;
 }
 h2{
     font-size:1.5em;     /*40px*/
@@ -57,10 +56,9 @@ h6{
 a{
     text-decoration: none;
     font-size:.75em;     /*20px*/
-    line-height: 1.5em !important;     /*30px*/
 }
 a:visited{
-    color: inherit; 
+    color: inherit; /*keep anchor tags same color when navagating*/
 }
 
 /* || SECTION SPECIFIC */
@@ -80,7 +78,6 @@ a:visited{
 }
 
 .main-nav >li {
-    /* padding: 1.125em; */
     padding: .5625em 1.125em; /* top and bottom to accomidate button alignment*/
     margin-top: .525em; /*14 px margin to make room for container border of 1 px 14 + 1 = 15*/
     margin-bottom:.525em;
@@ -201,6 +198,13 @@ a:visited{
     cursor: pointer;
 }
 
+/* having on selector for the lr padding shall make it easier to manipuate for mediaqueries and reduces redunancy */
+.universal-lr-padding{
+    padding-left:12.375em ; /* correspond with the Navbar word Better Together  which is 165px away from left edge*/
+    padding-right:6.1875em ;
+    padding-right:12.375em ;
+}
+
 /* cover */
 /* 26.6667/30 =1.125; for 1080/30 =36rows 720/30=27rows */
 .zonea {
@@ -208,56 +212,69 @@ a:visited{
     color: #00473e;
     padding-top:1.125em ;
     padding-bottom:3.375em;
-    padding-left:12.375em ; /* correspond with the Navbar word Better Together  which is 165px away from left edge*/
-    padding-right:5.625em ;
+   
  }
 
 /* hook */
  .zoneb {
     height: 16.875em; /*1.125*15  */
+   
     color: #ffffff;
     padding-top:4.500em ;
     padding-bottom:3.33em;
-    padding-left:12.375em;
-    padding-right:5.625em ;
+  
     background-color:   #00473e;
 }
 
-/* .background-img-d{
-    background-image: url("./img/undraw_experience.svg");
-    background-repeat: no-repeat;
-    background-size: 85% auto;
-} */
-
+/* CIOH */
 .zonec {
     height:  20.25em; /*1.11*27  75% 1080 screen; vaue 27*1.11/
     /* height: 50em; 1.11*27  75% 1080 screen */
     color: #00473e;
     padding-top:4.500em ;
     padding-bottom:3.33em;
-    padding-left:12.375em;
-    padding-right:5.625em 
+   
 
+}
+
+.zonepad{
+    height: 6.1875em; /*provides buffer for navbar anchor link 90px and  a spot to put the H2 45lh + 30 margin*/
+    background-color:#ffa8ba; 
+    align-items: flex-end;
 }
 /* experience */
 .zoned {
-    height:  28.125em; /*1.125*225  */
-    /* height: 50em; 1.11*27  75% 1080 screen */
+    height:  28.125em; /*1.125*21  */
     color: #00473e;
-    /* margin-top:1.11em ;
-    margin-bottom:3.33em;
-    margin-left: 5.55em ;
-    margin-right:5.55em ; */
-    padding-top:1.125em ;
-    padding-bottom:3.375em;
-    padding-left:12.375em ;
-    padding-right:5.625em ;
+    /* padding-top:1.125em ; */
+    /* padding-bottom:1.125em; */
+   
 }
+/* foundation */
+.zonee {
+    height:  28.125em; /*1.11*27  75% 1080 screen; vaue 27*1.11 */
+    /* height:  40em; */
+    color: #00473e;
+    padding-top:1.6875em ; /* padding 45 px so the question adressed doubt and keeps reader engaged*/
+    padding-bottom:3.375em;
+    background-color: #ffa8ba;
+}
+
+.zonef {
+
+    height: 16.875em; /*1.125*15  */
+   
+    color: #00473e;
+    padding-top:1.125em ;
+    padding-bottom:1.125em;
+
+}
+
 
 
 
 .zone {
-    height: 27.75em; /*1.11*27  75% 1080 screen; vaue 27*1.11/
+    height: 27.75em; /*1.11*27  75% 1080 screen; vaue 27*1.11/S
     /* height: 50em; 1.11*27  75% 1080 screen */
     color: #00473e;
     margin-top:1.11em ;
@@ -267,30 +284,29 @@ a:visited{
 }
 
 .background-img-d{
-    background-color: #d8779a ;
+    background-color:#ffa8ba ;
     background-image: url("./img/undraw_experience_green.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto 90%;
+    background-size: auto 100%; /*size of zone is 27*30 tall there for 100%/27=3.7*/
 }
 
 /* experience*/
 .carousel-container{
-    /* height:23.625em;
-    width: 36em; */
-    height: 11.8125em;
-    width: 18em ;
+    height: 14.625em;
+    width: 23.625em;
     /* width:59%; */
-    margin: 0 15.75em;
+    margin-left: 16.3125em; /*margins to center carousel in front of svg*/
+    margin-right: auto;
+    
+    margin-top: 1.6875em;
     overflow:hidden;
-    border: 5px solid black;
+    /* border: 5px solid black; */
     position: relative;
 }
 
  .carousel-slide{
-     /* display: flex;  */
-    /* width: 36em; */
-    height: 100%;
+    height: 14.625em;
 } 
 
 #prevBtn{
@@ -322,15 +338,47 @@ a:visited{
 
 /*Foundation*/
 .card{
+    height: 22.5em;  /*600px*/
+    width: 15.75em; /* 420 px to accomidate psmall*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 1em;
+    background-color: #f2f7f5; 
+    /* justify-content:center; */
 }
 .card-img{
     border-radius: 1em; 
+    width:80%;
+    height:auto;
+    
+}
+
+@media only screen and (max-width: 1600px) {
+    /* .main-nav {
+        font-size: 0.6em;
+        padding: 0;
+    }
+    
+    .main-nav > li > a> img{
+            height: auto;
+            width:  75%;
+    } */
+
+    .universal-lr-padding{
+        padding-left:.5em ; /* correspond with the Navbar word Better Together  which is 165px away from left edge*/
+        padding-right:6.1875em ;
+        padding-right:9.28125em ;
+    }
+    .hide{
+        display:none;
+    }
+    .push-again{
+        margin-left:auto;
+    }
+
 }
 
 
-/* attempts at responsiveness */
+/* attempts at responsiveness
 @media only screen and (max-width: 1300px) {
     .main-nav {
         font-size: 0.6em;
@@ -365,11 +413,35 @@ a:visited{
         height: auto;
         width:  65%;
     }
+    .universal-lr-padding{
+        padding-left:.5em ; /* correspond with the Navbar word Better Together  which is 165px away from left edge
+        padding-right:6.1875em ;
+        padding-right:9.28125em ;
+    }
 }
+*/
+/* @media only screen and (max-width: 800px) {
+    .main-nav {
+        font-size: 0.35em;
+        padding: 0;
+    }
+    .main-nav > li > a> img{
+        height: auto;
+        width:  65%;
+    }
+
+    .body{
+        font-size:0.83335em;
+    }
+
+} */ 
+
+
+
 
 /* possible structure  for  Also min-with 414* maybe 1280 also*/
-/* @media only screen and (max-width: 1024px) {
-    .main-nav {
+ @media only screen and (max-width: 1024px) {
+    /* .main-nav {
         font-size: 0.6em;
         padding: 0;
     }
@@ -377,11 +449,16 @@ a:visited{
     .main-nav > li > a> img{
             height: auto;
             width:  75%;
+    } */
+     .universal-lr-padding{
+        padding-left:.5em ; 
+        padding-right:6.1875em ;
+        padding-right:9.28125em ;
     }
 
 }
 @media only screen and (max-width: 768px) {
-    .main-nav {
+    /* .main-nav {
         font-size: 0.5em;
         padding: 0;
     }
@@ -389,9 +466,9 @@ a:visited{
     .main-nav > li > a> img{
             height: auto;
             width:  65%;
-    }
+    } */
 
-} */
+} 
 
 /* flexbox Utilities */
 .container{
@@ -426,8 +503,8 @@ a:visited{
     flex-wrap: wrap;
 }
 
-.self-vert-start{
-    align-self: flex-end;
+.self-vert-cntr{
+    align-self: center;
    
 }
 
@@ -504,7 +581,7 @@ a:visited{
 
 /*  made based of w3 school standards of 45-75 lines 66 being ideal */
 .p-small{
-    width: 20em}
+    width: 19.5em} /*1em is 20 px 420 is divisible by 30 and fits the 45 char requirement*/
 
 .p-med{
     width: 30em}
@@ -520,12 +597,19 @@ li{
     padding-left:0;
 }
 
+.mar-three{
+    margin:0 1.125em 0 0;
+}
+
 .mar-top-zero{
     margin-top: 0;
 }
+.push-down-card{
+    margin-top: 5.625em;
+}
 /* refactor */
 .pad-double{
-    padding-top: 4.5em;
+    margin-top: 6.75em;
 }
 
 .txt-cntr{text-align: center;}
@@ -547,3 +631,11 @@ li{
     max-height:100%;
     max-width:100%;
 }
+.bg-yellow{
+    background-color:#faae2b;
+}
+
+.center-text{
+    text-align:center;
+}
+
