@@ -6,9 +6,9 @@
   <link rel="stylesheet"
   href="https://fonts.googleapis.com/css?family=Raleway">
 </head>
-<body class="container-column offwhite" >
+<body class="container-column " >
   <!-- nav bar -->
-  <nav class="offwhite sticky">
+  <nav class="sticky">
       <ul class="main-nav container ">
           <li class= "nav-special"> <a href="#cover"> <img class="nav-logo-resize" src="./img/logo_nav.svg" alt=""></li>
           <li class="no-border"><a href="#cover"><strong>Better Together</strong></a></li>
@@ -23,12 +23,12 @@
   <!-- cover -->
   <div class="zonea container-row-space universal-lr-padding " id="cover">
     <div class="contianer-column  ">
-      <h6 class="pad-double" >BE BETTER FOR THE PEOPLE WHO MATTER</h6>
+      <h6 class="mar-double" >BE BETTER FOR THE PEOPLE WHO MATTER</h6>
       <h1>Want A Brighter Future?</h1>
       <h1>Start Today.</h1>
-      <button id="ctaBigBtn" class="pop-btn modal-sign-btn end"> Lets Get Started</button>
+      <button id="signBtn2" class="pop-btn modal-sign-btn end btn-cta "> Lets Get Started</button>
     </div>
-    <img  class="img-50"src="./img/cover.svg" alt="not displayed">
+    <img id="img-cover" src="./img/cover.svg" alt="not displayed">
   </div>
 
   <!-- benefits -->
@@ -40,11 +40,11 @@
       <section class="mar-top-zero" >
         <!-- <h3 class="mar-top-zero" >ipsum lorem</h3> -->
         <ul  class="container-row-space pad-left-zero">
-          <li class="container-column mar-three ">
+          <li class="container-column mar-right-std ">
             <h3>Results guaranteed</h3>
             <p class= "white p-small mar-top-zero">Better Together champions the proven method of the Compounding Intrest of Habits popularized by by New York Times best selling author <a href="https://jamesclear.com/">James Clear</a> in his book Atomic Habits.</p>
           </li>
-          <li class = "container-column mar-three  "> 
+          <li class = "container-column mar-right-std  "> 
             <h3 >Completley free</h3>
             <p class= " white p-small mar-top-zero">Better Together shall always be 100% free.The Better Together team believes that getting rid of barriers to self improvement shall cultivate a better society</p>
           </li>
@@ -67,9 +67,12 @@
       <p class="p-med mar-top-zero"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, tempore. Expedita fugit ipsa doloribus velit laudantium pariatur deserunt molestiae ducimus dolor asperiores praesentium, modi repellat quidem odit dolore quae ea. </p>
     </section>
   </div>
-  <div class="zonepad container universal-lr-padding"id="experience"><h2 class="mar-top-zero">Better Together Beta Features</h2></div>
+  <!-- extra buffer for experience -->
+  <div class="zonepad container universal-lr-padding" id="experience">
+    <h2 class="mar-top-zero">Better Together Beta Features</h2>
+  </div>
   <!-- experience -->
-  <div class="zoned background-img-d universal-lr-padding" >
+  <div class="zoned background-img-d universal-lr-padding" id="experienceMain" >
     <!-- <h2 class="mar-top-zero">Better Together Beta Features</h2> -->
     <div class= "carousel-container">
           <img src="./img/left-chevron.svg" id="prevBtn"></img>
@@ -86,16 +89,16 @@
   </div>
   <!-- foundation -->
   <div class= "zonee  container-column-space universal-lr-padding" id="foundation">
-    <h2 class="center-text">Dont Know Where to Start!?</h2>
+    <h2 class="txt-cntr">Dont Know Where to Start!?</h2>
     <div class= "container-row-space ">
-      <div class="card push-down-card container-column vert-cntr mar-three">
+      <div class="card push-down-card container-column vert-cntr mar-right-std">
         <img class= "card-img" src="./img/undraw_physical_health.svg" alt="">
         <h3>Physical Health</h3>
         <p class="p-small">Mindfulness is The awareness that arises from paying attention, on purpose, in the present moment and non-judgmentally </p>
         <p class="p-small">Mindfulness is The awareness that arises from paying attention, on purpose, in the present moment and non-judgmentally </p>
      </div>
-      <div class="card bg-yellow  container-column vert-cntr mar-three">
-        <img class= "card-img txt-cntr"src="./img/undraw_mindfulness.svg" alt="">
+      <div class="card bg-yellow  container-column vert-cntr mar-right-std">
+        <img class= "card-img "src="./img/undraw_mindfulness.svg" alt="">
         <h3>Mindfulness</h3>
         <p class="p-small">mindfulness is The awareness that arises from paying attention, on purpose, in the present moment and non-judgmentally </p>
         <p class="p-small"></p>
@@ -110,8 +113,8 @@
   </div>
   <!-- end CTA -->
   <div class="zonef container-column cntr  universal-lr-padding">
-    <h1 >Be The Change You Want To See In The World</h1>
-    <button class="pop-btn" id="signBtn3">Start Today</button>
+    <h1>Be The Change You Want To See In The World</h1>
+    <button class="pop-btn btn-cta" id="signBtn3">Start Today</button>
   </div>
   <!-- modal sign up -->
   <div class="modal-sign-bg">
