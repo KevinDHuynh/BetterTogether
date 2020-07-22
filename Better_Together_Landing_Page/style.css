@@ -249,7 +249,7 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
     width: 23.625em;
     margin-left: 16.3125em; /*margins to center carousel in front of bg svg*/
     margin-right: auto;
-    margin-top: 1.6875em;
+    margin-top:3.375em;
     overflow:hidden;        /*hides rest of image array*/
     position: relative;
 }
@@ -366,7 +366,7 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 }
 
 /**********************************
-|| GENERAL STYLING
+|| STYLING
 ***********************************/
 
 /* BUTTON */
@@ -377,10 +377,11 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
     font-size: .75em; 
     color: #00473e;
     margin-top: 2px;
-    margin-bottom: 2px; /* emulate default border */
+    margin-bottom: 2px; /* emulate pop default border */
     border-width: 0px;
     border-radius: 4px;
     padding: .75em 1.5em; /*.8em = 16 px in concjuction with 24px contentent and 2px borders is a 60 px tall button*/
+    font: 'Raleway' /* does not apply from body*/
 }
 
 .pop-btn {
@@ -390,7 +391,7 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
     font-size: .75em;  
     border-radius: 4px;
     padding: .75em 1.5em;
-    font-weight: bold;
+    font: 'Raleway' /* does not apply from body*/
 }
 
 .pop-btn.btn-cta {
