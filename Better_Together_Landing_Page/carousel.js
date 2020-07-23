@@ -13,7 +13,7 @@ var size = carouselImages[0].clientWidth;
 console.log(size);
 carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
-// Button Listeners
+// Button Listeners for next and previous buttons
 
 nextBtn.addEventListener('click',() => {
     if(counter >= carouselImages.length - 1) return;
@@ -29,6 +29,7 @@ prevBtn.addEventListener('click',() => {
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 });
 
+// Gets rid of animations to help jump between clones to make it seem like a never ending loop insted of how images are structue  LastClone First...Last First Clone
 carouselSlide.addEventListener('transitionend',() => {
     if(carouselImages[counter].id === 'lastClone'){
         carouselSlide.style.transition = "none"

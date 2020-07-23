@@ -1,5 +1,4 @@
-/******************************************************************************************************************************** 
-* BT Landing Page Style Sheet: Author Christian Arce(github:arcec-cs)
+/* BT Landing Page Style Sheet: Author Christian Arce(github:arcec-cs)
 * CSS Coding Style: Google recomendation(-order of properties/short hand)- https://google.github.io/styleguide/htmlcssguide.html
 * Header Font-Size Scaling: W3 Reccomendations- https://www.w3.org/TR/css-fonts-3/#font-size-prop
 * Typography Grid / Vert&Horz Motion- http://webtypography.net/toc#2.2
@@ -245,12 +244,12 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 }
 
 .carousel-container {
-    height: 14.625em;       /*size to fit withing bg svg*/
+    height: 14.625em; /*size to fit withing bg svg*/
     width: 23.625em;
-    margin-left: 16.3125em; /*margins to center carousel in front of bg svg*/
+    margin-left: 35%; /*margins to center carousel in front of bg svg*/
     margin-right: auto;
     margin-top:3.375em;
-    overflow:hidden;        /*hides rest of image array*/
+    overflow: hidden; /*hides rest of image array*/
     position: relative;
 }
 
@@ -259,9 +258,9 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 } 
 
 #prevBtn {
-    width:1.125em;        /*resize to be bigger and fit our graph*/
+    width:1.125em; /*resize to be bigger and fit our graph*/
     height: 1.125em;
-    position: absolute;   /*centers buttons infront of content in the middle*/
+    position: absolute; /*centers buttons infront of content in the middle*/
     top: 50%;          
     z-index: 10;
     left: 5%;
@@ -270,9 +269,9 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 }
 
 #nextBtn {
-    width:1.125em;        /*resize to be bigger and fit our graph*/
+    width:1.125em; /*resize to be bigger and fit our graph*/
     height: 1.125em;
-    position: absolute;   /*centers buttons infront of content in the middle*/
+    position: absolute; /*centers buttons infront of content in the middle*/
     top: 50%;
     z-index: 10;
     right: 5%;
@@ -284,7 +283,7 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 
 .zonee {
     height:  28.125em; 
-    padding-top:1.6875em ; /* padding 45 px so the question adressed doubt and keeps reader engaged*/
+    padding-top:1.6875em ; /*padding 45 px so the question adressed doubt and keeps reader engaged*/
     padding-bottom:3.375em;
     background-color: #ffa8ba;
 }
@@ -302,14 +301,14 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 ***********************************/
 
 .modal-log-bg {
-    position: fixed; 
+    position: fixed; /*fits dark bg to whole screen*/
     width: 100%;
     height: 100vh;
     top: 0;
     left:0;
     background-color: rgba(0,0,0,0.5);
     display: flex;
-    justify-content: center;
+    justify-content: center;     
     align-items: center;
     visibility: hidden;
     opacity: 0;
@@ -317,7 +316,7 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 }
 
 .modal-sign-bg {
-    position: fixed; 
+    position: fixed; /*fits dark bg to whole screen*/
     width: 100%;
     height: 100vh;
     top: 0;
@@ -332,7 +331,7 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 }
 
 .bg-active {
-    visibility: visible;
+    visibility: visible; /*applied/unapplied in JS to make visible*/
     opacity: 1;
 }
 
@@ -350,7 +349,7 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 }
 
 .modal-sign-close {
-    position: absolute;
+    position: absolute;  /*styling for the X close*/
     top: 10px;
     right: 10px;
     font-weight: bold;
@@ -358,7 +357,7 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 }
 
 .modal-log-close {
-    position: absolute;
+    position: absolute; /*styling for the X close*/
     top: 10px;
     right: 10px;
     font-weight: bold;
@@ -516,48 +515,70 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 || MEDIA QUERIES
 ***********************************/
 
-/*when navbar starts breaking
-@media only screen and (max-width: 1650px) {
-    /* .main-nav {
-        font-size: 0.6em;
+/* Medial queries here are used to accommodate widths of the most common desktop screen resolution sizes
+ world wide according to https://www.hobo-web.co.uk/best-screen-size/ spanning from 1920-1280 pixels wide
+ Responsive Design as in unique/optimal designs were not made for each of these screens due to time restricitons
+ however all of the websites content is visble and is in the same general format*/
+
+/* navbar and contentent start getting squished */
+@media only screen and (max-width: 1695px) {
+     .main-nav {
         padding: 0;
     }
-    
-    .main-nav > li > a> img{
-            height: auto;
-            width:  75%;
-    } 
+
+    #img-cover {
+        height: 9.2813em; 
+        width: 16.0313em;
+    }
 
     .universal-lr-padding {
-        padding-left:6.1875em ; /* correspond with the Navbar word Better Together  which is 165px away from left edge
-        padding-right:6.1875em ;
-        padding-right:9.28125em ;
-    }
-    .hide {
-        display:none;
-    }
-    .push-again {
-        margin-left:auto;
-    }
- 
-}
-/* For common Screen size of 1280x720px 
- @media only screen and (max-width: 1280px) {
-    /* .main-nav {
-        font-size: 0.6em;
-        padding: 0;
-    }
-    
-    .main-nav > li > a> img{
-            height: auto;
-            width:  75%;
-    } 
-     .universal-lr-padding {
-        padding-left:.5em ; 
-        padding-right:6.1875em ;
-        padding-right:9.28125em ;
+        padding-left:4.5em ; 
+        padding-right:4.5em ;
     }
 
 }
-*/
+
+/* For common Screen size of 1366×768px  */
+ @media only screen and (max-width: 1366px) {
+     .main-nav {
+        font-size: .9em;
+    }
+
+    .universal-lr-padding {
+        padding-left:2.25em ; 
+        padding-right:2.25em ;  
+    }
+ }
+
+ /* so content can still be read on 1280x720 screens */
+ @media only screen and (max-width: 1300px) {
+    
+   .universal-lr-padding {
+       padding-left:.5em ; 
+       padding-right:.5em ; 
+    }
+}
+
+/* despite webiste content not being visible at this width, got rid of navbar so login/ signin buttons are still accessible */
+@media only screen and (max-width: 1200px) {
+    
+    .main-nav {
+        font-size: .7em;
+    }
+
+    .hide {
+        display: none;  /*hides nav bar anchors to make room for buttons*/
+    }    
+
+    .push-again {
+        margin-left: auto; /* separates left and right side navbar now that anchors are gone*/
+    }
+
+}
+
+
+
+   
+
+
 
