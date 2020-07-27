@@ -1,4 +1,11 @@
 import React from "react";
+import './style.css';
+import LeftChevron from './img/left-chevron.svg';
+import RightChevron from './img/right-chevron.svg';
+import btdisplay from './img/bt-display.PNG';
+import btsign from './img/bt-sign.PNG';
+import btrecord from './img/bt-record.PNG';
+{/*import Carousel from './carousel';*/}
 
 class experience extends React.Component {
   render() {
@@ -9,42 +16,42 @@ class experience extends React.Component {
       >
         <div className="carousel-container">
           <img
-            src="./img/left-chevron.svg"
+            src= {LeftChevron}
             id="prevBtn"
-            alt="Next picture button"
+            alt="Previous picture button"
           />
           <img
-            src="./img/right-chevron.svg"
+            src= {RightChevron}
             id="nextBtn"
             alt="Next picture button"
           />
           <div className="carousel-slide container ">
             <img
               className="img-fit"
-              src="./img/bt-display.png"
+              src= {btdisplay}
               id="lastClone"
-              alt="Image showing created habits being displayed with the Better Together login tool"
+              alt="created habits being displayed with the Better Together login tool"
             />
             <img
               className="img-fit"
-              src="./img/bt-sign.png"
-              alt="Image showing the log in feature of Better Together"
+              src= {btsign}
+              alt="log in feature of Better Together"
             />
             <img
               className="img-fit"
-              src="./img/bt-record.png"
-              alt="Image showing Better Together's Habit Creation Tool"
+              src= {btrecord}
+              alt="showing Better Together's Habit Creation Tool"
             />
             <img
               className="img-fit"
-              src="./img/bt-display.png"
-              alt="Image showing created habits being displayed with the Better Together login tool"
+              src= {btdisplay}
+              alt= "showing created habits being displayed with the Better Together login tool"
             />
             <img
               className="img-fit"
-              src="./img/bt-sign.png"
+              src= {btsign}
               id="firstClone"
-              alt="Image showing the log in feature of Better Together"
+              alt="showing the log in feature of Better Together"
             />
           </div>
         </div>

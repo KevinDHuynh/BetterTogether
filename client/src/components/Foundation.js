@@ -1,5 +1,8 @@
 import React from "react";
-
+import './style.css';
+import undraw_physical_health from './img/undraw_physical_health.svg';
+import undraw_mindfulness from './img/undraw_mindfulness.svg';
+import undraw_mental_health from './img/undraw_mental_health.svg';
 class foundation extends React.Component {
   render() {
     return (
@@ -12,7 +15,7 @@ class foundation extends React.Component {
           <div className="card push-down-card container-column vert-cntr mar-right-std">
             <img
               className="card-img"
-              src="./img/undraw_physical_health.svg"
+              src={undraw_physical_health}
               alt="Image of people exercising representing Physical Health card"
             />
             <h3>Physical Health</h3>
@@ -28,7 +31,7 @@ class foundation extends React.Component {
           <div className="card bg-yellow container-column vert-cntr mar-right-std">
             <img
               className="card-img"
-              src="./img/undraw_mindfulness.svg"
+              src={undraw_mindfulness}
               alt="Image of lady sitting practicing mindfulness representing mindfulness card"
             />
             <h3>Mindfulness</h3>
@@ -45,7 +48,7 @@ class foundation extends React.Component {
           <div className="card push-down-card container-column vert-cntr container-column ">
             <img
               className="card-img"
-              src="./img/undraw_mental_health.svg"
+              src={undraw_mental_health}
               alt="Image of man sitting in nature to relax representing Mental Health Carc"
             />
             <h3>Mental Health</h3>

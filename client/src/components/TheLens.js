@@ -1,4 +1,6 @@
 import React from "react";
+import './style.css';
+import compoundinghabits from './img/compounding_habits.png';
 
 class theLens extends React.Component {
   render() {
@@ -12,7 +14,7 @@ class theLens extends React.Component {
           <img
             className="mar-right-std"
             id="compoundImg"
-            src="./img/compounding_habits.png"
+            src={compoundinghabits}
             alt="Compounding Interest Of Habits Chart"
           />
         </section>

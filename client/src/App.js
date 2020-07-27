@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, Fragment} from 'react';
 
 import { Provider } from 'react-redux';
 import store from './store';
@@ -19,6 +19,13 @@ import theme from './theme';
 
 import './App.css';
 
+const dashboard = (
+  <Fragment>
+    <HabitList />
+    <ItemModal />
+  </Fragment>
+)
+
 const App = () => {
   useEffect(() => {
     store.dispatch(loadUser());
@@ -36,8 +43,6 @@ const App = () => {
             <TheLens />
             <Experience />
             <Foundation />
-            { /* <HabitList />
-            <ItemModal /> */ }
           </Container>
         </div>
       </ThemeProvider>

@@ -1,5 +1,5 @@
 import React, { Component, Fragment} from 'react';
-import {AppBar, Toolbar, Typography, Snackbar} from '@material-ui/core';
+import {AppBar, Toolbar, Typography, Link} from '@material-ui/core';
 import { withStyles, createStyles } from '@material-ui/core/styles';
 
 import {connect} from 'react-redux';
@@ -8,6 +8,8 @@ import PropTypes from 'prop-types';
 import RegisterModal from './auth/RegisterModal';
 import Logout from './auth/Logout'
 import LoginModal from './auth/LoginModal';
+import Dashboard from './Dashboard';
+
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -35,6 +37,10 @@ class AppNavBar extends Component {
     classes: PropTypes.object.isRequired
   }
 
+  onSubmit = e => {
+    e.preventDefault();
+}
+
   render() {
     
 
@@ -44,14 +50,23 @@ class AppNavBar extends Component {
 
     const authLinks = (
       <Fragment>
-        <Logout />
+        <Typography variant="h5" className={classes.menuButton}>
+          <Logout />
+        </Typography>
+        <Typography variant="h5" className={classes.menuButton}>
+          <Dashboard />
+        </Typography>
       </Fragment>
     )
 
     const guestLinks = (
       <Fragment>
-        <RegisterModal />
-        <LoginModal />
+        <Typography variant="h5" className={classes.menuButton}>
+          <RegisterModal />
+        </Typography>
+        <Typography variant="h5" className={classes.menuButton}>
+          <LoginModal />
+        </Typography>
       </Fragment>
     )
     
@@ -59,8 +74,31 @@ class AppNavBar extends Component {
       <div className={classes.root}>
       <AppBar position="fixed" style={{ margin: 0 }}>
           <Toolbar>
-            <Typography variant="h6" className={classes.title}>
-              BetterTogether
+            <Typography variant="h5" className={classes.title}>
+              <Link href="#cover" color="inherit" onClick={this.onSubmit}>
+                BetterTogether
+              </Link>
+            </Typography>
+            
+            <Typography variant="h5" className={classes.menuButton}>
+              <Link href="#benefits" color="inherit" onClick={this.onSubmit}>
+                Benefits
+              </Link>
+            </Typography>  
+            <Typography variant="h5" className={classes.menuButton}>
+              <Link href="#theLens" color="inherit" onClick={this.onSubmit}>
+                The Lens
+              </Link>
+            </Typography>
+            <Typography variant="h5" className={classes.menuButton}>
+              <Link href="#experience" color="inherit" onClick={this.onSubmit}>
+                Experience
+              </Link>
+            </Typography>
+            <Typography variant="h5" className={classes.menuButton}>
+              <Link href="#foundation" color="inherit" onClick={this.onSubmit}>
+                Foundation
+              </Link>
             </Typography>
             { isAuthenticated ? authLinks : guestLinks}
           </Toolbar>
