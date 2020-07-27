@@ -57,7 +57,7 @@ class AppNavBar extends Component {
     
     return (
       <div className={classes.root}>
-      <AppBar position="static" style={{ margin: 0 }}>
+      <AppBar position="fixed" style={{ margin: 0 }}>
           <Toolbar>
             <Typography variant="h6" className={classes.title}>
               BetterTogether
