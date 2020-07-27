@@ -14,7 +14,7 @@ export class Logout extends Component {
         return (
             <div>
                 <Fragment>
-                    <Button onClick={this.props.logout} href="#" color="primary">
+                    <Button variant="contained" onClick={this.props.logout} href="#" color="secondary">
                         Logout
                     </Button>
                 </Fragment>

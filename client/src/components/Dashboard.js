@@ -41,12 +41,13 @@ class Dashboard extends Component{
         return(
             
             <div>
-                <Button variant="contained" color="primary" onClick={this.toggle}>
+                <Button variant="contained" color="secondary" onClick={this.toggle}>
                     Dashboard
                 </Button>
 
                 <Dialog
                 fullscreen
+                fullWidth
                 open={this.state.dialog}
                 onClose={this.toggle}
                 TransitionComponent={Transition}
