@@ -9,16 +9,10 @@ import { Container , ThemeProvider, CssBaseline} from '@material-ui/core/';
 import HabitList from './components/HabitList';
 import ItemModal from './components/ItemModal';
 import AppNavBar from './components/AppNavBar';
+
 import theme from './theme';
 
 import './App.css';
-
-const dashboard = (
-  <Fragment>
-    <HabitList />
-    <ItemModal />
-  </Fragment>
-)
 
 const App = () => {
   useEffect(() => {
@@ -31,10 +25,12 @@ const App = () => {
         <CssBaseline></CssBaseline>
         <div className="App">
           <AppNavBar />
+
           <Container>
-			<HabitList />
-			<ItemModal />
+            <HabitList />
+            <ItemModal />
           </Container>
+          
         </div>
       </ThemeProvider>
     </Provider>

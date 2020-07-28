@@ -68,10 +68,10 @@ class AppNavBar extends Component {
     
     return (
       <div className={classes.root}>
-      <AppBar position="fixed" style={{ margin: 0 }}>
+      <AppBar position="static">
           <Toolbar>
             <Typography variant="h5" className={classes.title}>
-              <Link href="#cover" color="inherit" onClick={this.onSubmit}>
+              <Link href="http://bettertogether.host/" color="inherit">
                 BetterTogether
               </Link>
             </Typography>

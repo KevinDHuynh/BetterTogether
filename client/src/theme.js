@@ -1,9 +1,20 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
 const palette = {
-  primary: { main: '#1B5E20' },
-  secondary: { main: '#F57F17' }
-};
-const themeName = 'Parsley Ecstasy Albacore';
+  primary: { 
+    main: '#F2F7F5',
+    contrastText: '#00473E',
 
-export default createMuiTheme({ palette, themeName });
+
+  },
+  secondary: {
+     main: '#FAAE2B',
+     contrastText: '#00473E',
+  }
+};
+
+const typography = {
+  fontFamily: 'Raleway, Sans-Serif',
+};
+
+export default createMuiTheme({ palette, typography,});
