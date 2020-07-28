@@ -80,26 +80,6 @@ class AppNavBar extends Component {
               </Link>
             </Typography>
             
-            <Typography variant="h5" className={classes.menuButton}>
-              <Link href="#benefits" color="inherit" onClick={this.onSubmit}>
-                Benefits
-              </Link>
-            </Typography>  
-            <Typography variant="h5" className={classes.menuButton}>
-              <Link href="#theLens" color="inherit" onClick={this.onSubmit}>
-                The Lens
-              </Link>
-            </Typography>
-            <Typography variant="h5" className={classes.menuButton}>
-              <Link href="#experience" color="inherit" onClick={this.onSubmit}>
-                Experience
-              </Link>
-            </Typography>
-            <Typography variant="h5" className={classes.menuButton}>
-              <Link href="#foundation" color="inherit" onClick={this.onSubmit}>
-                Foundation
-              </Link>
-            </Typography>
             { isAuthenticated ? authLinks : guestLinks}
           </Toolbar>
         </AppBar>

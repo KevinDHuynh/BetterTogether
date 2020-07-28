@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- Better Together Landing Page: Author- Christian Arce(Github:arcec-cs), 
+Format & Codining Style of Google: https://google.github.io/styleguide/htmlcssguide.html
+google reccomended W3 tool to check HTML Validity: https://validator.w3.org/nu/#textarea -->
+<html lang="en">
+<head>
+  <title>Better Together</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
+<body class="container-column">
+  
+  <!-- nav bar -->
+  <nav class="sticky">
+    <ul class="main-nav container">
+      <li class="nav-special"> <a href="#cover"> <img class="nav-logo-resize" src="./img/logo_nav.svg" alt="Better Together Logo at top left of Navigation Bar"></a></img></li>
+      <li class="no-border"><a href="#cover"><strong>Better Together</strong></a></li>
+      <li class="push nav-border-left hide"><a href="#benefits">Benefits</a></li>
+      <li class="hide"><a href="#theLens">The Lens</a></li>
+      <li class="hide"><a href="#experience">Experience</a></li>
+      <li class="hide"><a href="#foundation">Foundation</a></li>
+      <li class="nav-special push-again"><button class ="flat-btn modal-log-btn">Login</button></li>
+      <li class="nav-special"><button class="pop-btn modal-sign-btn" id="signBtn1"> Sign Up</button></li>
+    </ul>
+  </nav>
+  
+  <!-- cover -->
+  <div class="zonea container-row-space universal-lr-padding " id="cover">
+    <div class="contianer-column  ">
+      <h6 class="mar-double" >BE BETTER FOR THE PEOPLE WHO MATTER</h6>
+      <h1>Want A Brighter Future?</h1>
+      <h1>Start Today.</h1>
+      <button id="signBtn2" class="pop-btn modal-sign-btn btn-cta "> Lets Get Started</button>
+    </div>
+    <img id="img-cover" src="./img/cover.svg" alt="Image of two people holding a completed task">
+  </div>
+
+  <!-- benefits -->
+  <div class=" zoneb container-row-space universal-lr-padding" id="benefits" >
+    <section class="mar-top-zero" >
+      <ul  class="container-row-space pad-left-zero">
+        <li class="container-column mar-right-std ">
+          <h3>Results guaranteed</h3>
+          <p class="white p-small mar-top-zero">Better Together champions the proven method of the Compounding Intrest of Habits popularized by by New York Times best selling author <a href="https://jamesclear.com/">James Clear</a> in his book Atomic Habits.</p>
+        </li>
+        <li class ="container-column mar-right-std  "> 
+          <h3 >Completley free</h3>
+          <p class="white p-small mar-top-zero">Better Together shall always be 100% free.The Better Together team believes that getting rid of barriers to self improvement shall cultivate a better society</p>
+        </li>
+        <li class ="container-column ">
+          <h3 >Feeling lost?</h3>
+          <p class= "white p-small mar-top-zero"> Pave your own path, or walk down other's. Better Together's Habit Recorder offers predefined feilds that make it easy to frame new habits to commit to and *search habits shared by Better Toghers community memebers*. </p>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!--  the lens -->
+  <div class="zonec container-row-space  universal-lr-padding" id="theLens">
+    <section class="container-column">
+      <h6>Good Habits: The Compounding Intrest For Self-Improvement</h6>
+      <img class="mar-right-std" id="compoundImg" src="./img/compounding_habits.png" alt="Compounding Interest Of Habits Chart">
+    </section>
+    <section class="container-column">
+      <h3>ipsum</h3>
+      <p class="p-med mar-top-zero"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, tempore. Expedita fugit ipsa doloribus velit laudantium pariatur deserunt molestiae ducimus dolor asperiores praesentium, modi repellat quidem odit dolore quae ea. </p>
+      <p class="p-med mar-top-zero"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, tempore. Expedita fugit ipsa doloribus velit laudantium pariatur deserunt molestiae ducimus dolor asperiores praesentium, modi repellat quidem odit dolore quae ea. </p>
+    </section>
+  </div>
+
+  <!-- extra buffer for experience -->
+  <div class="zonepad container universal-lr-padding" id="experience">
+    <h2 class="mar-top-zero">Better Together Beta Features</h2>
+  </div>
+
+  <!-- experience -->
+  <div class="zoned background-img-d universal-lr-padding" id="experienceMain" >
+    <div class= "carousel-container">
+      <img src="./img/left-chevron.svg" id="prevBtn" alt="Next picture button">
+      <img src="./img/right-chevron.svg" id ="nextBtn" alt="Next picture button">
+      <div class="carousel-slide container ">
+          <img class ="img-fit" src="./img/bt-display.png" id="lastClone" alt="Image showing created habits being displayed with the Better Together login tool">
+          <img class ="img-fit" src="./img/bt-sign.png" alt="Image showing the log in feature of Better Together">
+          <img class ="img-fit" src="./img/bt-record.png" alt="Image showing Better Together's Habit Creation Tool">
+          <img class ="img-fit" src="./img/bt-display.png" alt="Image showing created habits being displayed with the Better Together login tool">
+          <img class ="img-fit" src="./img/bt-sign.png" id="firstClone" alt="Image showing the log in feature of Better Together">
+      </div>
+    </div>
+  </div>
+
+  <!-- foundation -->
+  <div class= "zonee  container-column-space universal-lr-padding" id="foundation">
+    <h2 class="txt-cntr">Dont Know Where to Start!?</h2>
+    <div class= "container-row-space ">
+      <div class="card push-down-card container-column vert-cntr mar-right-std">
+        <img class= "card-img" src="./img/undraw_physical_health.svg" alt="Image of people exercising representing Physical Health card">
+        <h3>Physical Health</h3>
+        <p class="p-small mar-top-zero">Mindfulness is The awareness that arises from paying attention, on purpose, in the present moment and non-judgmentally </p>
+        <p class="p-small">Mindfulness is The awareness that arises from paying attention, on purpose, in the present moment and non-judgmentally </p>
+      </div>
+      <div class="card bg-yellow container-column vert-cntr mar-right-std">
+        <img class= "card-img" src="./img/undraw_mindfulness.svg" alt="Image of lady sitting practicing mindfulness representing mindfulness card">
+        <h3>Mindfulness</h3>
+        <p class="p-small mar-top-zero">Mindfulness is The awareness that arises from paying attention, on purpose, in the present moment and non-judgmentally </p>
+        <p class="p-small">ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi neque fugiat totam, sequi suscipit  </p>
+        <p class="p-small"></p>
+      </div>
+      <div class="card push-down-card container-column vert-cntr container-column ">
+        <img class="card-img" src="./img/undraw_mental_health.svg" alt="Image of man sitting in nature to relax representing Mental Health Carc">
+        <h3>Mental Health</h3>
+        <p class="p-small mar-top-zero">mindfulness is The awareness that arises from paying attention, on purpose, in the present moment and non-judgmentally </p>
+        <p class="p-small"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- end CTA -->
+  <div class="zonef container-column cntr  universal-lr-padding">
+    <h1>Be The Change You Want To See In The World.</h1>
+    <button class="pop-btn btn-cta" id="signBtn3">Start Today</button>
+  </div>
+
+  <!-- modal sign up -->
+  <div class="modal-sign-bg">
+    <div class="modal">
+      <h2>Sign Up For Better Together!</h2>
+      <label for="usernameS">Username:</label>
+      <input type="text" name="usernameS" id="usernameS">
+      <label for="passwordS">Password:</label>
+      <input type="text" name="passwordS" id="passwordS">
+      <button>Sign Up!</button>
+      <span class="modal-sign-close">X</span>  
+    </div>
+  </div>
+
+  <!-- modal log in -->
+  <div class="modal-log-bg">
+    <div class="modal">
+      <h2>Log In To Better Together!</h2>
+      <label for="usernameL">Username:</label>
+      <input type="text" name="usernameL" id="usernameL">
+      <label for="passwordL">Password:</label>
+      <input type="text" name="passwordL" id="passwordL">
+      <button>Sign Up!</button>
+      <span class="modal-log-close">X</span>  
+    </div>
+  </div>
+
+  <!-- scripts -->
+  <script src="modal.js"></script>
+  <script src="carousel.js"></script>
+</body>
+</html>

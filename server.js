@@ -16,9 +16,9 @@ app.use(cors())
 //API routes
 app.use('/api/habit_recorders', require('./routes/api/habit_recorders'));   // habit entities
 app.use('/api/register', require('./routes/api/register'));                 // registration
-app.use('/api/login', require('./routes/api/login'))                        // login
+app.use('/api/login', require('./routes/api/login'));                        // login
 
-
+app.use('/', express.static(path.join(__dirname, '/public')));
 // Server static assets if in production
 if(process.env.NODE_ENV === 'production') {
     //Set static folder

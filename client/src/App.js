@@ -38,16 +38,12 @@ const App = () => {
         <div className="App">
           <AppNavBar />
           <Container>
-            <Cover />
-            <Benefits />
-            <TheLens />
-            <Experience />
-            <Foundation />
+			<HabitList />
+			<ItemModal />
           </Container>
         </div>
       </ThemeProvider>
     </Provider>
   );
 };
-//ReactDOM.render(<App />, document.querySelector('#App'));
 export default App;
