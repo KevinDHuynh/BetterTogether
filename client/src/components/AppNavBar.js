@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 import RegisterModal from './auth/RegisterModal';
 import Logout from './auth/Logout'
 import LoginModal from './auth/LoginModal';
-import Dashboard from './Dashboard';
 
 
 const useStyles = createStyles((theme) => ({
@@ -52,9 +51,6 @@ class AppNavBar extends Component {
       <Fragment>
         <Typography variant="h5" className={classes.menuButton}>
           <Logout />
-        </Typography>
-        <Typography variant="h5" className={classes.menuButton}>
-          <Dashboard />
         </Typography>
       </Fragment>
     )
