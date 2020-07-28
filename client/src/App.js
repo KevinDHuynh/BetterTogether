@@ -1,4 +1,4 @@
-import React, {useEffect, Fragment} from 'react';
+import React, {useEffect} from 'react';
 
 import { Provider } from 'react-redux';
 import store from './store';
@@ -30,7 +30,7 @@ const App = () => {
             <HabitList />
             <ItemModal />
           </Container>
-          
+
         </div>
       </ThemeProvider>
     </Provider>

@@ -45,7 +45,7 @@ class AppNavBar extends Component {
 
     const { classes } = this.props;
 
-    const { isAuthenticated, user } = this.props.auth;
+    const { isAuthenticated } = this.props.auth;
 
     const authLinks = (
       <Fragment>
