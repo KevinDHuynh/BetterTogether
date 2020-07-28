@@ -91,6 +91,7 @@ h6 {
 }
 
 a {
+    color:#00473e; 
     text-decoration: none;
     font-size: .75em; /*20px*/
 }
@@ -291,9 +292,9 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 /*  || END CTA */
 
 .zonef {
-    height: 16.875em; /*1.125*15*/
-    padding-top:1.125em ;
-    padding-bottom:1.125em;
+    height: 9.5625em; /*1.125*15*/
+    /* /* padding-top:1.125em ; */
+    padding-bottom:2.25em; 
 }
 
 /**********************************
