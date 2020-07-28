@@ -18,16 +18,20 @@ app.use('/api/habit_recorders', require('./routes/api/habit_recorders'));   // h
 app.use('/api/register', require('./routes/api/register'));                 // registration
 app.use('/api/login', require('./routes/api/login'));                        // login
 
-app.use('/', express.static(path.join(__dirname, '/public')));
-// Server static assets if in production
-if(process.env.NODE_ENV === 'production') {
-    //Set static folder
-    app.use(express.static('client/build'));
 
-    app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+app.use('/portal', express.static(path.join(__dirname, 'client/build')));
+
+app.use('/', express.static(path.join(__dirname, 'public')));
+
+
+app.get('/portal/*', (req, res) => {
+        res.sendFile(path.join(__dirname, '/client/build/index.html'));
     });
-}
+
+app.get('/*', (req, res) => {
+        res.sendFile(path.join(__dirname, '/public/index.html'));
+    });
+
 
 //Connect to DB
 const db = config.get('mongoURI');
