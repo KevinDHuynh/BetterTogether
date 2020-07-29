@@ -64,6 +64,9 @@ class HabitList extends Component{
                                     <Typography variant="body1" component="p">
                                         {description}
                                     </Typography>
+                                    <Typography variant="body2" component="p">
+                                        Activity Time: {estimated_time}
+                                    </Typography>
                                 </CardContent>
                             </Card>
                         </Grid>

@@ -34,7 +34,7 @@ class ItemModal extends Component{
             value: 'Mental Health',
             label: 'Mental Health',
           },
-        {/*{
+        /*{
           value: 'SLEEP',
           label: 'Sleep',
         },
@@ -46,7 +46,7 @@ class ItemModal extends Component{
           value: 'PLEASURE',
           label: 'Pleasure',
         },
-    */}
+    */
       ];
 
     difficulty = [
@@ -74,33 +74,34 @@ class ItemModal extends Component{
 
     time = [
         {
-          value: 'LESS_THAN_A_WEEK',
-          label: '<1 Week',
+          value: 'Flexible',
+          label: 'Flexible',
         },
         {
-            value: 'ONE_WEEK',
-            label: '1 Week',
+            value: '1-5 Minutes',
+            label: '1-5 Minutes',
         },
         {
-            value: 'TWO_WEEKS',
-            label: '2 Weeks',
+            value: '5-20 Minutes',
+            label: '5-20 Minutes',
         },
         {
-            value: 'THREE_WEEKS',
-            label: '3 Weeks',
+            value: '20-60 Minutes',
+            label: '20-60 Minutes',
         },
         {
-            value: 'ONE_MONTH',
-            label: '1 Month',
+            value: '1-2 Hours',
+            label: '1-2 Hours',
         },
         {
-            value: 'EIGHT_WEEKS',
-            label: '2 Months',
+            value: '2-5 Hours',
+            label: '2-5 Hours',
         },
         {
-            value: 'TWELVE_WEEKS',
-            label: '3 Months',
+            value: '>5 Hours',
+            label: '>5 Hours',
         },
+        /*
         {
             value: 'TWENTYONE_WEEKS',
             label: '6 Months',
@@ -125,6 +126,7 @@ class ItemModal extends Component{
             value: 'GREATER_THAN_TEN_YEARS',
             label: '>10 Years',
         },
+        */
       ];
     
     toggle = () => {
