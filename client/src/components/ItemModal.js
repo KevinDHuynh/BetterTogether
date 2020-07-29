@@ -27,10 +27,14 @@ class ItemModal extends Component{
     
     types = [
         {
-          value: 'PHYSICAL',
-          label: 'Physical',
+          value: 'Physical Health',
+          label: 'Physical Health',
         },
         {
+            value: 'Mental Health',
+            label: 'Mental Health',
+          },
+        {/*{
           value: 'SLEEP',
           label: 'Sleep',
         },
@@ -42,6 +46,7 @@ class ItemModal extends Component{
           value: 'PLEASURE',
           label: 'Pleasure',
         },
+    */}
       ];
 
     difficulty = [
