@@ -20,7 +20,7 @@ class ItemModal extends Component{
         title: '',
         type:'',
         description: '',
-        perceived_benefit:'',
+        perceived_benefit: 5,
         estimated_difficulty:'',
         estimated_time:'',
     }
@@ -138,6 +138,12 @@ class ItemModal extends Component{
         this.setState({ [e.target.name]: e.target.value });
     }
 
+    handleChange = name => (e, value) => {
+        this.setState({
+          [name]: value // --> Important bit here: This is how you set the value of sliders
+        });
+    };
+
     onSubmit = e => {
         e.preventDefault();
 
@@ -222,6 +228,7 @@ class ItemModal extends Component{
                                         min={1}
                                         max={10}
                                         color="secondary"
+                                        onChange={this.handleChange("perceived_benefit")}
                                     />
                                 </ListItem>
                                 <ListItem>
