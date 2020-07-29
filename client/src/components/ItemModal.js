@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
-import {Dialog, TextField, Button, DialogTitle,DialogActions, List, ListItem, MenuItem, Slider, Typography} from '@material-ui/core/';
+import {Dialog, TextField, Button, DialogTitle,DialogActions, List, ListItem, MenuItem, Slider, Typography, Fab, DialogContent} from '@material-ui/core/';
 import { connect } from 'react-redux';
 import { addItem } from '../actions/itemActions';
+import {Add} from '@material-ui/icons';
+
+const style = {
+    margin: 0,
+    top: 'auto',
+    right: 20,
+    bottom: 20,
+    left: 'auto',
+    position: 'fixed',
+};
 
 class ItemModal extends Component{
     state = {
@@ -142,77 +152,80 @@ class ItemModal extends Component{
     render() {
         return(
             <div>
-                <Button variant="contained" color="primary" onClick={this.toggle} style={{margin: '2em'}} >
-                    Add Habit
-                </Button>
+                <Fab variant="contained" color="secondary" onClick={this.toggle} style={style}>
+                    <Add />
+                </Fab>
 
                 <Dialog
                 aria-labelledby="new-habit-dialog"
                 open={this.state.dialog}
                 >
                     <DialogTitle id="new-habit-dialog">Create New Habit</DialogTitle>
-                    <form onSubmit={this.onSubmit}>
-                        <List>
-                            <ListItem>
-                                <TextField label="Name of Habit" name="title" margin="dense" onChange={this.onChange}/>
-                            </ListItem>
-                            <ListItem>
-                                <TextField label="Brief Description" name="description" margin="dense" onChange={this.onChange}/>
-                            </ListItem>
-                            <ListItem>
-                                <TextField select variant="standard" fullWidth="True" label="Type of Habit" name="type" margin="dense" onChange={this.onChange}>
-                                {this.types.map((option) => (
-                                    <MenuItem key={option.value} value={option.value}>
-                                    {option.label}
-                                    </MenuItem>
-                                ))}
-                                </TextField>
-                            </ListItem>
-                            <ListItem>
-                                {/* Predicted Longterm Benefit*/}
-                                <Typography id="discrete-slider" gutterBottom>
-                                    Predicted Longterm Benefit
-                                </Typography>
-                                <Slider
-                                    name="predicted_longterm_benefit"
-                                    defaultValue={5}
-                                    aria-labelledby="discrete-slider"
-                                    valueLabelDisplay="auto"
-                                    step={1}
-                                    marks
-                                    min={1}
-                                    max={10}
-                                />
-                            </ListItem>
-                            <ListItem>
+                    <DialogContent>
+                        <form onSubmit={this.onSubmit}>
+                            <List>
+                                <ListItem>
+                                    <TextField color="secondary" label="Name of Habit" name="title" margin="dense" onChange={this.onChange}/>
+                                </ListItem>
+                                <ListItem>
+                                    <TextField color="secondary" label="Brief Description" name="description" margin="dense" onChange={this.onChange}/>
+                                </ListItem>
+                                <ListItem>
+                                    <TextField select color="secondary" variant="standard" fullWidth="True" label="Type of Habit" name="type" margin="dense" onChange={this.onChange}>
+                                    {this.types.map((option) => (
+                                        <MenuItem key={option.value} value={option.value}>
+                                        {option.label}
+                                        </MenuItem>
+                                    ))}
+                                    </TextField>
+                                </ListItem>
+                                <ListItem>
+                                    {/* Predicted Longterm Benefit*/}
+                                    <Typography id="discrete-slider" color="black" gutterBottom>
+                                        Predicted Longterm Benefit
+                                    </Typography>
+                                    <Slider
+                                        name="predicted_longterm_benefit"
+                                        defaultValue={5}
+                                        aria-labelledby="discrete-slider"
+                                        valueLabelDisplay="auto"
+                                        step={1}
+                                        marks
+                                        min={1}
+                                        max={10}
+                                        color="secondary"
+                                    />
+                                </ListItem>
+                                <ListItem>
 
-                                {/* Estimated Difficulty*/}
+                                    {/* Estimated Difficulty*/}
 
-                                <TextField select variant="standard" fullWidth="True" label="Estimated Difficulty" name="estimated_difficulty" margin="dense" onChange={this.onChange}>
-                                {this.difficulty.map((option) => (
-                                    <MenuItem key={option.value} value={option.value}>
-                                    {option.label}
-                                    </MenuItem>
-                                ))}
-                                </TextField>
+                                    <TextField color="secondary" select variant="standard" fullWidth="True" label="Estimated Difficulty" name="estimated_difficulty" margin="dense" onChange={this.onChange}>
+                                    {this.difficulty.map((option) => (
+                                        <MenuItem key={option.value} value={option.value}>
+                                        {option.label}
+                                        </MenuItem>
+                                    ))}
+                                    </TextField>
 
-                            </ListItem>
-                            <ListItem>
-                                {/* Estimated Time */}
+                                </ListItem>
+                                <ListItem>
+                                    {/* Estimated Time */}
 
-                                <TextField select variant="standard" fullWidth="True" label="Estimated Time" name="estimated_time" margin="dense" onChange={this.onChange}>
-                                {this.time.map((option) => (
-                                    <MenuItem key={option.value} value={option.value}>
-                                    {option.label}
-                                    </MenuItem>
-                                ))}
-                                </TextField>
-                            </ListItem>
-                        </List>
-                    </form>
+                                    <TextField color="secondary" select variant="standard" fullWidth="True" label="Estimated Time" name="estimated_time" margin="dense" onChange={this.onChange}>
+                                    {this.time.map((option) => (
+                                        <MenuItem key={option.value} value={option.value}>
+                                        {option.label}
+                                        </MenuItem>
+                                    ))}
+                                    </TextField>
+                                </ListItem>
+                            </List>
+                        </form>
+                    </DialogContent>
                     <DialogActions>
-                        <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-                        <Button color="primary" onClick={this.onSubmit}>Add Item</Button>
+                        <Button color="secondary" variant="contained" onClick={this.toggle}>Cancel</Button>
+                        <Button type="submit" color="secondary" variant="contained" onClick={this.onSubmit}>Add Item</Button>
                     </DialogActions>
                 </Dialog>
             </div>

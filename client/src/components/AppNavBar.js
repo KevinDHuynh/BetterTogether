@@ -13,6 +13,7 @@ import LoginModal from './auth/LoginModal';
 const useStyles = createStyles((theme) => ({
   root: {
     flexGrow: 1,
+    marginBottom: theme.spacing(2),
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -68,7 +69,7 @@ class AppNavBar extends Component {
     
     return (
       <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="relative">
           <Toolbar>
             <Typography variant="h5" className={classes.title}>
               <Link href="http://bettertogether.host/" color="inherit">

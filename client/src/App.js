@@ -9,6 +9,7 @@ import { Container , ThemeProvider, CssBaseline} from '@material-ui/core/';
 import HabitList from './components/HabitList';
 import ItemModal from './components/ItemModal';
 import AppNavBar from './components/AppNavBar';
+import Introduction from './components/Introduction';
 
 import theme from './theme';
 
@@ -25,7 +26,9 @@ const App = () => {
         <CssBaseline></CssBaseline>
         <div className="App">
           <AppNavBar />
-
+          <Container>
+            <Introduction />
+          </Container>
           <Container>
             <HabitList />
             <ItemModal />
