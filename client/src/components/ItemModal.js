@@ -20,7 +20,7 @@ class ItemModal extends Component{
         title: '',
         type:'',
         description: '',
-        predicted_longterm_benefit:'',
+        perceived_benefit:'',
         estimated_difficulty:'',
         estimated_time:'',
     }
@@ -51,23 +51,23 @@ class ItemModal extends Component{
 
     difficulty = [
         {
-            value: 'VERY_EASY',
+            value: 'Very Easy',
             label: 'Very Easy'
         },
         {
-            value: 'EASY',
+            value: 'Easy',
             label: 'Easy'
         },
         {
-            value: 'MEDIUM',
+            value: 'Medium',
             label: 'Medium'
         },
         {
-            value: 'HARD',
+            value: 'Hard',
             label: 'Hard'
         },
         {
-            value: 'VERY_HARD',
+            value: 'Very Hard',
             label: 'Very Hard'
         },
     ];
@@ -145,7 +145,7 @@ class ItemModal extends Component{
             title: this.state.title,
             type: this.state.type,
             description: this.state.description,
-            predicted_longterm_benefit: this.state.predicted_longterm_benefit,
+            perceived_benefit: this.state.perceived_benefit,
             estimated_difficulty: this.state.estimated_difficulty,
             estimated_time: this.state.estimated_time
         }
@@ -210,10 +210,10 @@ class ItemModal extends Component{
                                 <ListItem>
                                     {/* Predicted Longterm Benefit*/}
                                     <Typography id="discrete-slider" color="black" gutterBottom>
-                                        Predicted Longterm Benefit
+                                        Perceived Longterm Benefit
                                     </Typography>
                                     <Slider
-                                        name="predicted_longterm_benefit"
+                                        name="perceived_benefit"
                                         defaultValue={5}
                                         aria-labelledby="discrete-slider"
                                         valueLabelDisplay="auto"
