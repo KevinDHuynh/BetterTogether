@@ -459,6 +459,10 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
     margin-top: 0;
 }
 
+.mar-bottom-zero {
+    margin-bottom: 0;
+}
+
 .mar-double {
     margin-top: 6.75em;
 }
@@ -467,8 +471,12 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
     margin-top: 5.625em;
 }
 
-.txt-cntr{
+.txt-cntr {
     text-align: center;
+}
+
+.txt-end {
+    text-align: end; 
 }
 
 .img-fit{
