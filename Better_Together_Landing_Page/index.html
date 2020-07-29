@@ -14,11 +14,15 @@ google reccomended W3 tool to check HTML Validity: https://validator.w3.org/nu/#
   <!-- nav bar -->
   <nav class="sticky">
     <ul class="main-nav container">
-      <li class="nav-special"> <a href="#cover"> <img class="nav-logo-resize" src="./img/logo_nav.svg" alt="Better Together Logo at top left of Navigation Bar"></a></li>
-      <li class="no-border"><a href="#cover"><strong>Better Together</strong></a></li>
-      <!-- <li class="push nav-border-left hide"><a href="#benefits">Benefits</a></li> -->
+      <li class="nav-special"> <a href="#cover"> <img class="nav-logo-resize" src="./img/logo_nav2.svg" alt="Better Together Logo at top left of Navigation Bar"></a></li>
+      <li class="no-border">
+        <ol class="container-column" id="accomidateTagline"> 
+          <a href="#cover"><strong>Better Together</strong></a> 
+          <a href="#cover" id="tagline">A Habit Building Platform</a>
+        </ol>
+      </li>
       <li class=" push nav-border-left hide"><a href="#theLens">The Lens</a></li>
-      <li class="hide"><a href="#experience">Experience</a></li>
+      <li class="hide"><a href="#features">Features</a></li>
       <li class="hide"><a href="#guide">Guide</a></li>
       <li class="nav-special push-again"><button class ="flat-btn modal-log-btn">Login</button></li>
       <li class="nav-special"><button class="pop-btn modal-sign-btn" id="signBtn1"> Sign Up</button></li>
@@ -36,10 +40,9 @@ google reccomended W3 tool to check HTML Validity: https://validator.w3.org/nu/#
     <img id="img-cover" src="./img/cover.svg" alt="Image of two people holding a completed task">
   </div>
 
-  <!-- benefits -->
-  <div class=" zoneb container-row-space universal-lr-padding" id="benefits" >
-    <section class="mar-top-zero" >
-      <ul  class="container-row-space pad-left-zero">
+  <!-- concerns -->
+  <div class=" zoneb container-column-space universal-lr-padding" >
+    <ul  class="container-row-space pad-left-zero">
         <li class="container-column mar-right-std ">
           <h3>Results guaranteed</h3>
           <p class="white p-small mar-top-zero">Better Together champions the proven method of the Compounding Intrest of Habits popularized by by New York Times best selling author <a class="white" href="https://jamesclear.com/">James Clear</a> in his book Atomic Habits.</p>
@@ -50,10 +53,10 @@ google reccomended W3 tool to check HTML Validity: https://validator.w3.org/nu/#
         </li>
         <li class ="container-column ">
           <h3 >Feeling lost?</h3>
-          <p class= "white p-small mar-top-zero"> Pave your own path, or walk down other's. Better Together's Habit Recorder offers predefined feilds that make it easy to frame new habits to commit to and *search habits shared by Better Toghers community memebers*. </p>
+          <p class= "white p-small mar-top-zero">Pave your own path, or walk down other's. Better Together's Habit Recorder offers predefined feilds that make it easy to frame new habits to commit to and *search habits shared by Better Together's community members. </p>
         </li>
       </ul>
-    </section>
+      <p id="disclaimer">*Disclaimer: The feature to share, search, or view other's habits have not been added yet.</p>
   </div>
 
   <!--  the lens -->
@@ -61,21 +64,23 @@ google reccomended W3 tool to check HTML Validity: https://validator.w3.org/nu/#
     <section class="container-column">
       <h6>Good Habits: The Compounding Interest For Self-Improvement</h6>
       <img class="mar-right-std" id="compoundImg" src="./img/compounding_habits.png" alt="Compounding Interest Of Habits Chart">
+      <h6 class="mar-top-zero" id="compoundImgCapLarge">Getting 1 percent better each day for a year makes you 37 times better. Conversely, getting 1 percent worse each day for a year, you’ll decline nearly down to zero</h6>
     </section>
     <section class="container-column">
       <h3>The Compounding Interest of Habits</h3>
-      <p class="p-med mar-top-zero"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, tempore. Expedita fugit ipsa doloribus velit laudantium pariatur deserunt molestiae ducimus dolor asperiores praesentium, modi repellat quidem odit dolore quae ea. </p>
-      <p class="p-med mar-top-zero"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, tempore. Expedita fugit ipsa doloribus velit laudantium pariatur deserunt molestiae ducimus dolor asperiores praesentium, modi repellat quidem odit dolore quae ea. </p>
+      <p class="p-med mar-top-zero">Better Together encourages its community to build habits that will work for them and avoid continuing ones that work against them dictated through the lens of the Compounding Interest of Habits popularized by James Clear in his book Atomic Habits.</p>
+      <p class="p-med mar-top-zero">This entails one turning negative and neutral habits into positive ones and increasing the rate that positive habits bring improvement in ones lives to see even greater results.</p>
+      <p class="p-med "> <em>"Habits are the compound interest of self-improvement. The same way that money multiplies through compound interest, the effects of your habits multiply as you repeat them. They seem to make little difference on any given day and yet the impact they deliver over the months and years can be enormous. It is only when looking back two, five, or perhaps ten years later that the value of good habits and the cost of bad ones becomes strikingly apparent."</em>     -James Clear (Atomic Habits)</p>
     </section>
   </div>
 
   <!-- extra buffer for experience -->
-  <div class="zonepad container universal-lr-padding" id="experience">
+  <div class="zonepad container universal-lr-padding" id="features">
     <h2 class="mar-top-zero">Better Together Beta Features</h2>
   </div>
 
-  <!-- experience -->
-  <div class="zoned background-img-d universal-lr-padding" id="experienceMain" >
+  <!-- features -->
+  <div class="zoned background-img-d universal-lr-padding" id="featuresMain" >
     <div class= "carousel-container">
       <img src="./img/left-chevron.svg" id="prevBtn" alt="Next picture button">
       <img src="./img/right-chevron.svg" id ="nextBtn" alt="Next picture button">
@@ -90,26 +95,26 @@ google reccomended W3 tool to check HTML Validity: https://validator.w3.org/nu/#
   </div>
 
   <!-- guide -->
-  <div class= "zonee  container-column-space universal-lr-padding" id="guide">
+  <div class= "zonee  container-column-space" id="guide">
     <h2 class="txt-cntr">Dont Know Where to Start!?</h2>
     <div class= "container-row-space ">
       <div class="card push-down-card container-column vert-cntr mar-right-std">
         <img class= "card-img" src="./img/undraw_physical_health.svg" alt="Image of people exercising representing Physical Health card">
         <h3>Physical Health</h3>
-        <p class="p-small mar-top-zero">Mindfulness is The awareness that arises from paying attention, on purpose, in the present moment and non-judgmentally </p>
-        <p class="p-small">Mindfulness is The awareness that arises from paying attention, on purpose, in the present moment and non-judgmentally </p>
+        <p class="p-small mar-top-zero">Maintaining physical health has numerous benefits. The American Heart Association(ACA) says physical activity is a natural mood booster, gives one more energy and helps you one live longer. </p>
+        <p class="p-small mar-top-zero">The ACA reccomends 30 mins of activity a day, however creating any movement based habit will greatly benefit oneself!</p>
       </div>
       <div class="card bg-yellow container-column vert-cntr mar-right-std">
         <img class= "card-img" src="./img/undraw_mindfulness.svg" alt="Image of lady sitting practicing mindfulness representing mindfulness card">
         <h3>Mindfulness</h3>
         <p class="p-small mar-top-zero">Mindfulness is The awareness that arises from paying attention, on purpose, in the present moment and non-judgmentally </p>
-        <p class="p-small">ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi neque fugiat totam, sequi suscipit  </p>
+        <p class="p-small mar-top-zero">Since everyone's life is unique breeding subconsious habits, mindfulness is needed to identify negative habits and create positive habits to see how to make one's habits work with them </p>
       </div>
       <div class="card push-down-card container-column vert-cntr container-column ">
         <img class="card-img" src="./img/undraw_mental_health.svg" alt="Image of man sitting in nature to relax representing Mental Health Carc">
         <h3>Mental Health</h3>
-        <p class="p-small mar-top-zero">ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem ipsa eveniet illo repel </p>
-        <p class="p-small">ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi neque fugiat totam, sequi suscipit  </p>
+        <p class="p-small mar-top-zero">Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, act, and make choices.</p>
+        <p class="p-small mar-top-zero">Creating habits that are beneficial to mental health include staying positive, helping others and just taking time for yourself.   </p>
         <p class="p-small"></p>
       </div>
     </div>
@@ -121,34 +126,7 @@ google reccomended W3 tool to check HTML Validity: https://validator.w3.org/nu/#
     <button class="pop-btn btn-cta" id="signBtn3">Start Today</button>
   </div>
 
-  <!-- modal sign up -->
-  <div class="modal-sign-bg">
-    <div class="modal">
-      <h2>Sign Up For Better Together!</h2>
-      <label for="usernameS">Username:</label>
-      <input type="text" name="usernameS" id="usernameS">
-      <label for="passwordS">Password:</label>
-      <input type="text" name="passwordS" id="passwordS">
-      <button>Sign Up!</button>
-      <span class="modal-sign-close">X</span>  
-    </div>
-  </div>
-
-  <!-- modal log in -->
-  <div class="modal-log-bg">
-    <div class="modal">
-      <h2>Log In To Better Together!</h2>
-      <label for="usernameL">Username:</label>
-      <input type="text" name="usernameL" id="usernameL">
-      <label for="passwordL">Password:</label>
-      <input type="text" name="passwordL" id="passwordL">
-      <button>Sign Up!</button>
-      <span class="modal-log-close">X</span>  
-    </div>
-  </div>
-
   <!-- scripts -->
-  <script src="modal.js"></script>
   <script src="carousel.js"></script>
 </body>
 </html>
