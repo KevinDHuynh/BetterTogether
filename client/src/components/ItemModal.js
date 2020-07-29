@@ -20,7 +20,7 @@ class ItemModal extends Component{
         title: '',
         type:'',
         description: '',
-        perceived_benefit: 5,
+        perceived_benefit: 1,
         estimated_difficulty:'',
         estimated_time:'',
     }
@@ -220,7 +220,7 @@ class ItemModal extends Component{
                                     </Typography>
                                     <Slider
                                         name="perceived_benefit"
-                                        defaultValue={5}
+                                        defaultValue={1}
                                         aria-labelledby="discrete-slider"
                                         valueLabelDisplay="auto"
                                         step={1}
