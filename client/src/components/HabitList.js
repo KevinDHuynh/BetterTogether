@@ -39,7 +39,6 @@ class HabitList extends Component{
         this.props.deleteItem(id);
     }
 
-    
     render() {
         const { classes } = this.props;
         const { items } = this.props.item;
@@ -48,7 +47,7 @@ class HabitList extends Component{
             
             <Container>
                 <Grid container direction="row" spacing={2} style={{marginTop: '1em'}}>
-                    {items.map(({ _id,description,predicted_longterm_benefit,perceived_benefit,estimated_difficulty,title,type}) => (
+                    {items.map(({ _id,description,estimated_time,estimated_difficulty,title,type}) => (
                         <Grid item>
                             <Card>
                                 <CardHeader
@@ -58,14 +57,12 @@ class HabitList extends Component{
                                         </IconButton>
                                     }
                                     title={title}
+                                    subheader={type}
                                 >
                                 </CardHeader>
                                 <CardContent>
-                                    <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                    {type}
-                                    </Typography>
-                                    <Typography variant="body2" component="p">
-                                    {description}
+                                    <Typography variant="body1" component="p">
+                                        {description}
                                     </Typography>
                                 </CardContent>
                             </Card>

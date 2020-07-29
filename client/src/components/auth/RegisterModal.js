@@ -85,19 +85,19 @@ class RegisterModal extends Component{
                     <form onSubmit={this.onSubmit}>
                         <List>
                             <ListItem>
-                                <TextField label="Full Name" name="name" margin="dense" onChange={this.onChange}/>
+                                <TextField color="secondary" label="Full Name" name="name" margin="dense" onChange={this.onChange}/>
                             </ListItem>
                             <ListItem>
-                                <TextField label="Username" name="username" margin="dense" onChange={this.onChange}/>
+                                <TextField color="secondary" label="Username" name="username" margin="dense" onChange={this.onChange}/>
                             </ListItem>
                             <ListItem>
-                                <TextField label="Password" name="password" margin="dense" onChange={this.onChange}/>
+                                <TextField color="secondary" label="Password" name="password" margin="dense" onChange={this.onChange}/>
                             </ListItem>
                         </List>
                     </form>
                     <DialogActions>
                         <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-                        <Button color="primary" onClick={this.onSubmit}>Register</Button>
+                        <Button color="secondary" onClick={this.onSubmit}>Register</Button>
                     </DialogActions>
                 </Dialog>
             </div>

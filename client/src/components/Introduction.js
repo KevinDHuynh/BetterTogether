@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Card, CardActions, CardContent, Button} from '@material-ui/core';
+import {Card, CardContent} from '@material-ui/core';
 import { withStyles, createStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
@@ -22,7 +22,19 @@ const useStyles = createStyles((theme) => ({
 }));
 
 
+
+
+
 class Introduction extends Component {
+  state = {
+    visible: true,
+  }
+
+  toggle = () => {
+    this.setState({
+        visible: !this.state.visible
+    });
+  }
 
 
   render() {
@@ -30,24 +42,15 @@ class Introduction extends Component {
     return (
         <Card className={classes.root}>
             <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                Word of the Day
-                </Typography>
                 <Typography variant="h5" component="h2">
-                def
-                </Typography>
-                <Typography className={classes.pos} color="textSecondary">
-                adjective
+                Welcome!
                 </Typography>
                 <Typography variant="body2" component="p">
-                well meaning and kindly.
+                Here you can record your habits and save them for future reference.
                 <br />
-                {'"a benevolent smile"'}
+                To record habits, please register for an account or log in.
                 </Typography>
             </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
         </Card>
     );
   }

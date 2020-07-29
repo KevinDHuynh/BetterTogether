@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment} from 'react';
 import {Dialog, TextField, Button, DialogTitle,DialogActions, List, ListItem, MenuItem, Slider, Typography, Fab, DialogContent} from '@material-ui/core/';
 import { connect } from 'react-redux';
 import { addItem } from '../actions/itemActions';
 import {Add} from '@material-ui/icons';
+import PropTypes from 'prop-types';
 
 const style = {
     margin: 0,
@@ -147,14 +148,34 @@ class ItemModal extends Component{
         this.toggle();
     }
 
+    static propTypes = {
+        auth: PropTypes.object.isRequired,
+        classes: PropTypes.object.isRequired,
+    }
 
 
     render() {
-        return(
-            <div>
+
+        const { isAuthenticated } = this.props.auth;
+
+        const showFab = (
+          <Fragment>
                 <Fab variant="contained" color="secondary" onClick={this.toggle} style={style}>
                     <Add />
                 </Fab>
+          </Fragment>
+        )
+
+        const noFab = (
+            <Fragment>
+            </Fragment>
+          )
+
+        return(
+            <div>
+
+                { isAuthenticated ? showFab : noFab}
+                
 
                 <Dialog
                 aria-labelledby="new-habit-dialog"
@@ -234,6 +255,7 @@ class ItemModal extends Component{
     }
 }
 const mapStateToProps = state => ({
-    item: state.item
+    item: state.item,
+    auth: state.auth
 })
 export default connect(mapStateToProps, { addItem })(ItemModal);

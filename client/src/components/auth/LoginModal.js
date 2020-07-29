@@ -83,16 +83,16 @@ class LoginModal extends Component{
                     <form onSubmit={this.onSubmit}>
                         <List>
                             <ListItem>
-                                <TextField label="Username" name="username" margin="dense" onChange={this.onChange}/>
+                                <TextField color="secondary" label="Username" name="username" margin="dense" onChange={this.onChange}/>
                             </ListItem>
                             <ListItem>
-                                <TextField label="Password" name="password" margin="dense" onChange={this.onChange}/>
+                                <TextField color="secondary" label="Password" name="password" margin="dense" onChange={this.onChange}/>
                             </ListItem>
                         </List>
                     </form>
                     <DialogActions>
                         <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-                        <Button color="primary" onClick={this.onSubmit}>Login</Button>
+                        <Button color="secondary" onClick={this.onSubmit}>Login</Button>
                     </DialogActions>
                 </Dialog>
             </div>
