@@ -240,7 +240,7 @@ class ItemModal extends Component{
                                 <ListItem>
                                     {/* Estimated Time */}
 
-                                    <TextField color="secondary" select variant="standard" fullWidth="True" label="Estimated Time" name="estimated_time" margin="dense" onChange={this.onChange}>
+                                    <TextField color="secondary" select variant="standard" fullWidth="True" label="Average Activity Time" name="estimated_time" margin="dense" onChange={this.onChange}>
                                     {this.time.map((option) => (
                                         <MenuItem key={option.value} value={option.value}>
                                         {option.label}
