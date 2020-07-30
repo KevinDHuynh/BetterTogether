@@ -36,6 +36,7 @@ body {
     background-color: #f2f7f5;
     font-size: 1.6667em; /* 26.6666667 px to get  20px paragraphs with W3 Reccomended header Ratios*/
     font-family: 'Raleway', sans-serif;
+    position: absolute;
 }
 
 /* line heights are the the closest multiple of 15px, go to 4 decimals for consistency and accuracy when looking at web inspector tool*/
@@ -213,6 +214,7 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 
 .zoneb {
     height: 16.875em; /*1.125*15  */
+    width:inherit;
     padding-top: 4.500em ;
     padding-bottom: 3.375em;
     color: #f2f7f5;
@@ -319,21 +321,14 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
     right: 0;
     height: 10%;
     width: 100%;
-    opacity: 0;
-    transition: .5s ease;
+    opacity: .85;
+    /* transition: .5s ease; */
     background-color: #00473e;
 }
   
-.con-banner:hover .overlay  {
+/* .con-banner:hover .overlay  {
     opacity: .85;
-}
-
-.b:hover .overlay  {
-    opacity: .85;
-}
-#prevBtn:hover .overlay  {
-    opacity: .85;
-}
+} */
   
 .text {
     color: #f2f7f5 ;
@@ -534,7 +529,10 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 /* Medial queries here are used to accommodate widths of the most common desktop screen resolution sizes
  world wide according to https://www.hobo-web.co.uk/best-screen-size/ spanning from 1920-1280 pixels wide
  Responsive Design as in unique/optimal designs were not made for each of these screens due to time restricitons
- however all of the websites content is visble and is in the same general format*/
+ however all of the websites content is visble and is in the same general format
+ 
+ UPDATE: Testing all Common screen sizes and Mobile and Tablets now, looking promising all Content is accessible :) will make better comments later
+ */
 
 /* navbar and contentent start getting squished */
 @media only screen and (max-width: 1695px) {
@@ -591,7 +589,7 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
     
 }
 
-/* despite webiste content not being visible at this width, got rid of navbar so login/ signin buttons are still accessible */
+/* general styling for mobile and tablet displays*/
 @media only screen and (max-width: 1200px) {
     
     .main-nav {
@@ -605,7 +603,40 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
     .push-again {
         margin-left: auto; /* separates left and right side navbar now that anchors are gone*/
     }
+    
+    .overlay {
+        opacity: 85%;
+    }
 
+    #navStart{
+        margin-left: 4.5em ;
+    }
+
+    #navEnd{
+        margin-right: 4.5em ;
+    }
+
+    .zonea {
+        margin-left: 4.5em ;
+        margin-right: 4.5em ;
+    }
+    .zoneb{
+        padding-left: 4.5em ;
+        padding-right: 4.5em ;
+    }
+
+    .zonec {
+        margin-left: 4.5em;
+        margin-right: 4.5em ;
+    }
+
+    .zonepad {
+        padding-left: 4.5em ;
+    }
+
+    .carousel-container {
+        margin-left: 36%; /*prevent image from overlapping  paint roller */
+    }
 }
 
 
