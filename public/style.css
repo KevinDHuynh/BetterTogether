@@ -36,7 +36,8 @@ body {
     background-color: #f2f7f5;
     font-size: 1.6667em; /* 26.6666667 px to get  20px paragraphs with W3 Reccomended header Ratios*/
     font-family: 'Raleway', sans-serif;
-    position: absolute;
+    /* position: absolute; */
+    /* background-color: yellow; */
 }
 
 /* line heights are the the closest multiple of 15px, go to 4 decimals for consistency and accuracy when looking at web inspector tool*/
@@ -591,7 +592,7 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 
 /* general styling for mobile and tablet displays*/
 @media only screen and (max-width: 1200px) {
-    
+  
     .main-nav {
         font-size: .7em;
     }
@@ -637,6 +638,12 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
     .carousel-container {
         margin-left: 36%; /*prevent image from overlapping  paint roller */
     }
+
+    .mobile {
+        position: absolute;
+    }
+
+    
 }
 
 
