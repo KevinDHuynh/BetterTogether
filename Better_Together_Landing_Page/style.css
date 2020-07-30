@@ -270,9 +270,10 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
 .carousel-container {
     height: 14.625em; /*size to fit withing bg svg*/
     width: 23.625em;
-    margin-left: 35%; /*margins to center carousel in front of bg svg*/
+    width: 24.75em;
+    margin-left: 34%; /*margins to center carousel in front of bg svg*/
     margin-right: auto;
-    margin-top:3.375em;
+    margin-top:4.05em;/*had to diverge from grid system of by 3px, however needed to center in svg*/
     overflow: hidden; /*hides rest of image array*/
     position: relative;
 }
@@ -285,7 +286,7 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
     width:1.125em; /*resize to be bigger and fit our graph*/
     height: 1.125em;
     position: absolute; /*centers buttons infront of content in the middle*/
-    top: 50%;          
+    top: 45%;          
     z-index: 10;
     left: 5%;
     opacity: 0.5;         
@@ -296,11 +297,53 @@ makes it easier to manipuate for media queries and reduces redunancy and Helps H
     width:1.125em; /*resize to be bigger and fit our graph*/
     height: 1.125em;
     position: absolute; /*centers buttons infront of content in the middle*/
-    top: 50%;
+    top: 45%;
     z-index: 10;
     right: 5%;
     opacity: 0.5;
     cursor: pointer;
+}
+
+/* BANNER*/
+.con-banner {
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+.overlay {
+    position: absolute;
+    top: 79%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #00473e;
+}
+  
+.con-banner:hover .overlay  {
+    opacity: .85;
+}
+
+.b:hover .overlay  {
+    opacity: .85;
+}
+#prevBtn:hover .overlay  {
+    opacity: .85;
+}
+  
+.text {
+    color: #f2f7f5 ;
+    font-size: .75em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 /*  || FOUNDATION */
