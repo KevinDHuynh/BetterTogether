@@ -9,7 +9,8 @@ const nextBtn = document.querySelector('#nextBtn');
 
 //Counter
 let counter = 1;
-var size = carouselImages[0].clientWidth;
+// var size = carouselImages[0].clientWidth;
+var size = carouselImages[0].offsetWidth;
 console.log(size);
 carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
