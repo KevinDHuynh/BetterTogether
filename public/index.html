@@ -9,12 +9,12 @@ google reccomended W3 tool to check HTML Validity: https://validator.w3.org/nu/#
   <link rel="stylesheet" type="text/css" href="./style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 </head>
-<body class="container-column">
+<body class="container-column mobile">
 
   <!-- nav bar -->
   <nav class="sticky">
     <ul class="main-nav container">
-      <li class="nav-special"> <a href="#cover"> <img class="nav-logo-resize" src="./img/logo_nav2.svg" alt="Better Together Logo at top left of Navigation Bar"></a></li>
+      <li id="navStart" class="nav-special"> <a href="#cover"> <img class="nav-logo-resize" src="./img/logo_nav2.svg" alt="Better Together Logo at top left of Navigation Bar"></a></li>
       <li class="no-border">
         <ol class="container-column" id="accomidateTagline">
           <a href="#cover"><strong>Better Together</strong></a>
@@ -25,7 +25,7 @@ google reccomended W3 tool to check HTML Validity: https://validator.w3.org/nu/#
       <li class="hide"><a href="#features">Features</a></li>
       <li class="hide"><a href="#guide">Guide</a></li>
       <li class="nav-special push-again"><button class ="flat-btn modal-log-btn" onclick = "window.location.href='http://bettertogether.host/portal/'" >Login</button></li>
-      <li class="nav-special"><button id="signBtn1" class="pop-btn modal-sign-btn" onclick = "window.location.href='http://bettertogether.host/portal/'"> Sign Up</button></li>
+      <li id="navEnd" class="nav-special"><button id="signBtn1" class="pop-btn modal-sign-btn" onclick = "window.location.href='http://bettertogether.host/portal/'"> Sign Up</button></li>
     </ul>
   </nav>
 
@@ -77,7 +77,7 @@ google reccomended W3 tool to check HTML Validity: https://validator.w3.org/nu/#
 
   <!-- extra buffer for experience -->
   <div class="zonepad container universal-lr-padding" id="features">
-    <h2 class="mar-top-zero">Better Together Beta Features</h2>
+    <h2  class="mar-top-zero">Better Together Beta Features</h2>
   </div>
 
   <!-- features -->
@@ -86,11 +86,43 @@ google reccomended W3 tool to check HTML Validity: https://validator.w3.org/nu/#
       <img src="./img/left-chevron.svg" id="prevBtn" alt="Next picture button">
       <img src="./img/right-chevron.svg" id ="nextBtn" alt="Next picture button">
       <div class="carousel-slide container ">
-          <img class ="img-fit" src="./img/bt-display.PNG" id="lastClone" alt="Image showing created habits being displayed with the Better Together login tool">
+        <div class="con-banner">
+          <img class ="img-fit" src="./img/bt-delete.PNG" id="lastClone" alt="Image showing previous habits deleted with the Better Together login tool">
+          <div class="overlay">
+            <div class="text">Delete Your Habits!</div>
+          </div>
+        </div>
+        <div class="con-banner">
           <img class ="img-fit" src="./img/bt-sign.PNG" alt="Image showing the log in feature of Better Together">
+          <div class="overlay">
+            <div class="text">Log In From Anywhere!</div>
+          </div>
+        </div>
+        <div class="con-banner">
           <img class ="img-fit" src="./img/bt-record.PNG" alt="Image showing Better Together's Habit Creation Tool">
+          <div class="overlay">
+            <div class="text">Record Your Habits!</div>
+          </div>
+        </div>
+        <div class="con-banner">
           <img class ="img-fit" src="./img/bt-display.PNG" alt="Image showing created habits being displayed with the Better Together login tool">
+          <div class="overlay">
+            <div class="text">View Your Habits!</div>
+          </div>
+        </div>
+        <div class="con-banner">
+          <img class ="img-fit" src="./img/bt-delete.PNG" alt="Image showing previous habits deleted with the Better Together login toolr">
+          <div class="overlay">
+            <div class="text">Delete Your Old Habits!</div>
+          </div>
+        </div>
+        <div class="con-banner">
           <img class ="img-fit" src="./img/bt-sign.PNG" id="firstClone" alt="Image showing the log in feature of Better Together">
+          <div class="overlay">
+            <div class="text">Log In From Anywhere!</div>
+          </div>
+        </div>
+       
       </div>
     </div>
   </div>
@@ -102,8 +134,8 @@ google reccomended W3 tool to check HTML Validity: https://validator.w3.org/nu/#
       <div class="card push-down-card container-column vert-cntr mar-right-std">
         <img class= "card-img" src="./img/undraw_physical_health.svg" alt="Image of people exercising representing Physical Health card">
         <h3>Physical Health</h3>
-        <p class="p-small mar-top-zero mar-card-p">Maintaining physical health has numerous benefits. The American Heart Association(ACA) says physical activity is a natural mood booster, gives one more energy, and helps one live longer. </p>
-        <p class="p-small mar-top-zero mar-card-p">The ACA reccomends 30 mins of activity a day, however, creating any movement based habit will greatly benefit oneself!</p>
+        <p class="p-small mar-top-zero mar-card-p">Maintaining physical health has numerous benefits. The American Heart Association(AHA) says physical activity is a natural mood booster, gives one more energy, and helps one live longer. </p>
+        <p class="p-small mar-top-zero mar-card-p">The AHA reccomends 30 mins of activity a day, however, creating any movement based habit will greatly benefit oneself!</p>
       </div>
       <div class="card bg-yellow container-column vert-cntr mar-right-std">
         <img class= "card-img" src="./img/undraw_mindfulness.svg" alt="Image of lady sitting practicing mindfulness representing Mindfulness Card">
@@ -125,8 +157,7 @@ google reccomended W3 tool to check HTML Validity: https://validator.w3.org/nu/#
     <h1>Be The Change You Want To See In The World.</h1>
     <button id="signBtn3" class="pop-btn btn-cta" onclick = "window.location.href='http://bettertogether.host/portal/'">Start Today</button>
   </div>
-
-  <!-- scripts -->
-  <script src="./carousel.js"></script>
 </body>
+<!-- scripts -->
+  <script src="./carousel.js"></script>
 </html>

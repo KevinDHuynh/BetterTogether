@@ -47,7 +47,7 @@ class HabitList extends Component{
             
             <Container>
                 <Grid container direction="row" spacing={2} style={{marginTop: '1em'}}>
-                    {items.map(({ _id,description,estimated_time,estimated_difficulty,title,type}) => (
+                    {items.map(({ _id,description,estimated_time,estimated_difficulty,perceived_benefit,title,type}) => (
                         <Grid item>
                             <Card>
                                 <CardHeader
@@ -66,6 +66,10 @@ class HabitList extends Component{
                                     </Typography>
                                     <Typography variant="body2" component="p">
                                         Activity Time: {estimated_time}
+                                        <br />
+                                        Difficulty: {estimated_difficulty}
+                                        <br />
+                                        Predicted Benefit: {perceived_benefit}/10
                                     </Typography>
                                 </CardContent>
                             </Card>

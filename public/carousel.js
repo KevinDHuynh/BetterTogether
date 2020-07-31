@@ -1,6 +1,6 @@
 // carousel for experience section
 const carouselSlide = document.querySelector('.carousel-slide');
-const carouselImages =document.querySelectorAll('.carousel-slide img') ;
+const carouselImages =document.querySelectorAll('.con-banner img') ;
 
 console.log(carouselImages)
 //buttons
