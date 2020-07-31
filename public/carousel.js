@@ -11,6 +11,10 @@ const nextBtn = document.querySelector('#nextBtn');
 let counter = 1;
 // var size = carouselImages[0].clientWidth;
 var size = carouselImages[0].offsetWidth;
+if(size == 0) // when hosted  both the offsetWidth and clienWidth return 0. this is a workaround.
+{
+    size = 660;
+}
 console.log(size);
 carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
